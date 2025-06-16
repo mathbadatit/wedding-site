@@ -1,0 +1,11 @@
+# CREA AMBIENTE VIRTUALE
+python -m venv venv
+
+# ATTIVA AMBIENTE (su Windows)
+venv\Scripts\activate
+
+# INSTALLA DIPENDENZE
+pip install -r requirements.txt
+
+# AVVIA IL SERVER
+python app.py

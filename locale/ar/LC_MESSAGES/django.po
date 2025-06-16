@@ -1,0 +1,32 @@
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
+msgid "Servizi"
+msgstr "الخدمات"
+
+msgid "Galleria"
+msgstr "المعرض"
+
+msgid "Contattaci"
+msgstr "اتصل بنا"
+
+msgid "Realizza il tuo matrimonio da sogno"
+msgstr "حقق حفل زفاف أحلامك"
+
+msgid "Contattaci per organizzare un evento unico"
+msgstr "اتصل بنا لتنظيم حدث فريد من نوعه"
+
+msgid "I nostri servizi"
+msgstr "خدماتنا"
+
+msgid "Richiedi informazioni"
+msgstr "اطلب معلومات"
+
+msgid "Invia"
+msgstr "إرسال"
+
+msgid "Politica sui Cookie"
+msgstr "سياسة ملفات تعريف الارتباط"
+
+msgid "Informativa sulla Privacy"
+msgstr "سياسة الخصوصية"

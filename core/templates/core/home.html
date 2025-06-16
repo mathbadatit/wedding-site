@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Benvenuti" %}{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>{% trans "Realizza il tuo matrimonio da sogno" %}</h1>
+  <p>{% trans "Contattaci per organizzare un evento unico" %}</p>
+</section>
+
+<section class="carousel">
+  {% for image in images %}
+    <img src="{{ image.image.url }}" alt="{{ image.caption }}">
+  {% endfor %}
+</section>
+
+<section class="services">
+  <h2>{% trans "I nostri servizi" %}</h2>
+  {% for s in services %}
+    <div>
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.description }}</p>
+    </div>
+  {% endfor %}
+</section>
+{% endblock %}

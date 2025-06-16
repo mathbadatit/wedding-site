@@ -1,0 +1,6 @@
+@echo off
+echo Avvio ambiente virtuale...
+call .venv\Scripts\activate
+echo Avvio server Flask...
+python app.py
+pause

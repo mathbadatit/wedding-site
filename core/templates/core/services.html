@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Servizi" %}{% endblock %}
+{% block content %}
+<h1>{% trans "Servizi disponibili" %}</h1>
+<div class="services">
+  {% for service in services %}
+    <h2>{{ service.title }}</h2>
+    <p>{{ service.description }}</p>
+  {% endfor %}
+</div>
+{% endblock %}
