@@ -2,16 +2,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from . import views
+from core import views  # se la tua app si chiama "core"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('services/', views.services, name='services'),
-    path('gallery/', views.gallery, name='gallery'),
-    path('contact/', views.contact, name='contact'),
-    path('privacy/', views.privacy, name='privacy'),
-    path('cookie/', views.cookie_policy, name='cookie'),
+    path('upload/', views.upload_photo, name='upload'),  # opzionale se hai la view
 ]
 
 if settings.DEBUG:
