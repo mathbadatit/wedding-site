@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Prenota') }}{% endblock %}
+
+{% block content %}
+<div class="form-box">
+  <h2>{{ _('Prenota il tuo matrimonio') }}</h2>
+  <form id="bookingForm">
+    <label for="nome">{{ _('Nome') }}</label>
+    <input type="text" name="nome" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" required>
+
+    <label for="telefono">{{ _('Telefono') }}</label>
+    <input type="text" name="telefono">
+
+    <label for="data">{{ _('Data matrimonio') }}</label>
+    <input type="date" name="data" required>
+
+    <label for="location">{{ _('Location desiderata') }}</label>
+    <input type="text" name="location">
+
+    <label for="budget">{{ _('Budget indicativo') }}</label>
+    <input type="text" name="budget">
+
+    <input type="hidden" id="recaptchaToken" name="recaptchaToken">
+    <button type="submit" class="btn">{{ _('Invia') }}</button>
+    <p id="bookingMsg"></p>
+  </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

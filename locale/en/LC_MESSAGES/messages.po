@@ -1,0 +1,124 @@
+msgid ""
+msgstr ""
+"Language: en\n"
+"Content-Type: text/plain; charset=utf-8\n"
+
+#: templates/base.html:7
+msgid "Home"
+msgstr "Home"
+
+#: templates/base.html:8
+msgid "Galleria"
+msgstr "Gallery"
+
+#: templates/base.html:9
+msgid "Prenota"
+msgstr "Book"
+
+#: templates/base.html:12
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: templates/base.html:13
+msgid "Aggiungi Servizio"
+msgstr "Add Service"
+
+#: templates/base.html:14
+msgid "Carica Immagine"
+msgstr "Upload Image"
+
+#: templates/base.html:15
+msgid "Logout"
+msgstr "Logout"
+
+#: templates/base.html:17
+msgid "Login"
+msgstr "Login"
+
+#: templates/booking.html:3
+msgid "Prenota il tuo matrimonio"
+msgstr "Book Your Wedding"
+
+#: templates/booking.html:6
+msgid "Prenotazione"
+msgstr "Booking"
+
+#: templates/booking.html:8
+msgid "Nome"
+msgstr "Name"
+
+#: templates/booking.html:11
+msgid "Email"
+msgstr "Email"
+
+#: templates/booking.html:14
+msgid "Telefono"
+msgstr "Phone"
+
+#: templates/booking.html:17
+msgid "Data del matrimonio"
+msgstr "Wedding Date"
+
+#: templates/booking.html:20
+msgid "Location desiderata"
+msgstr "Desired Location"
+
+#: templates/booking.html:23
+msgid "Budget indicativo"
+msgstr "Approximate Budget"
+
+#: templates/booking.html:26
+msgid "Prenota ora"
+msgstr "Book Now"
+
+#: app.py:45 app.py:79
+msgid "reCAPTCHA non superato"
+msgstr "reCAPTCHA verification failed"
+
+#: app.py:49 app.py:83
+msgid "Compila tutti i campi obbligatori"
+msgstr "Please fill all required fields"
+
+#: app.py:70
+msgid "Nuova prenotazione ricevuta"
+msgstr "New Booking Received"
+
+#: app.py:95
+msgid "Messaggio inviato, grazie!"
+msgstr "Message sent, thank you!"
+
+#: templates/contact.html:3
+msgid "Contatti"
+msgstr "Contact"
+
+#: templates/contact.html:6
+msgid "Contattaci"
+msgstr "Contact Us"
+
+#: templates/contact.html:8
+msgid "Messaggio"
+msgstr "Message"
+
+#: templates/contact.html:16
+msgid "Invia messaggio"
+msgstr "Send Message"
+
+#: templates/contact.html:6
+msgid "Contattaci"
+msgstr "Contact Us"
+
+#: templates/contact.html:8
+msgid "Messaggio"
+msgstr "Message"
+
+#: templates/contact.html:16
+msgid "Invia messaggio"
+msgstr "Send message"
+
+#: app.py:95
+msgid "Messaggio inviato, grazie!"
+msgstr "Message sent, thank you!"
+
+#: app.py:98
+msgid "Nuovo messaggio da contatto"
+msgstr "New contact message"

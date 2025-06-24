@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Galleria') }}{% endblock %}
+
+{% block content %}
+<h2>{{ _('Le nostre immagini') }}</h2>
+<div class="gallery-grid">
+  {% for image in images %}
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/' ~ image.filename) }}" alt="{{ image.caption }}">
+      <p>{{ image.caption }}</p>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

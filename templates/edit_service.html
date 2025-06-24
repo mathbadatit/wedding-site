@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Modifica Servizio</h2>
+<form method="POST">
+  <div class="form-group">
+    <input type="text" name="title" value="{{ service.title }}" required>
+  </div>
+  <div class="form-group">
+    <textarea name="description" rows="4" required>{{ service.description }}</textarea>
+  </div>
+  <button class="btn" type="submit">Aggiorna</button>
+</form>
+{% endblock %}

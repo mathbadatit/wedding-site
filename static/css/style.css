@@ -1,0 +1,75 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+.navbar {
+  background-color: #eee;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #d85b82;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #bf4e6f;
+  cursor: pointer;
+}
+
+.form-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.form-box label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.form-box input,
+.form-box textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-box button {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #d4af7f;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#bookingMsg, #contactMsg {
+  margin-top: 15px;
+  font-weight: bold;
+  min-height: 1.5em;
+}

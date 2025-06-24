@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Benvenuti') }}{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-text">
+    <h1>{{ _('Realizza il tuo matrimonio da sogno') }}</h1>
+    <a href="{{ url_for('booking') }}" class="btn">{{ _('Prenota ora') }}</a>
+  </div>
+</section>
+
+<section class="carousel services-section">
+  {% for image in images %}
+    <div class="slide">
+      <img src="{{ url_for('static', filename='images/' ~ image.filename) }}" alt="{{ image.caption }}">
+    </div>
+  {% endfor %}
+</section>
+
+<section class="services-section">
+  <h2>{{ _('I nostri servizi') }}</h2>
+  <div class="services-grid">
+    {% for s in services %}
+      <div class="service-card">
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

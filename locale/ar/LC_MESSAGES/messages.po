@@ -1,0 +1,124 @@
+msgid ""
+msgstr ""
+"Language: ar\n"
+"Content-Type: text/plain; charset=utf-8\n"
+
+#: templates/base.html:7
+msgid "Home"
+msgstr "الرئيسية"
+
+#: templates/base.html:8
+msgid "Galleria"
+msgstr "المعرض"
+
+#: templates/base.html:9
+msgid "Prenota"
+msgstr "احجز"
+
+#: templates/base.html:12
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+#: templates/base.html:13
+msgid "Aggiungi Servizio"
+msgstr "إضافة خدمة"
+
+#: templates/base.html:14
+msgid "Carica Immagine"
+msgstr "رفع صورة"
+
+#: templates/base.html:15
+msgid "Logout"
+msgstr "تسجيل خروج"
+
+#: templates/base.html:17
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: templates/booking.html:3
+msgid "Prenota il tuo matrimonio"
+msgstr "احجز زفافك"
+
+#: templates/booking.html:6
+msgid "Prenotazione"
+msgstr "حجز"
+
+#: templates/booking.html:8
+msgid "Nome"
+msgstr "الاسم"
+
+#: templates/booking.html:11
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: templates/booking.html:14
+msgid "Telefono"
+msgstr "رقم الهاتف"
+
+#: templates/booking.html:17
+msgid "Data del matrimonio"
+msgstr "تاريخ الزفاف"
+
+#: templates/booking.html:20
+msgid "Location desiderata"
+msgstr "المكان المطلوب"
+
+#: templates/booking.html:23
+msgid "Budget indicativo"
+msgstr "الميزانية التقديرية"
+
+#: templates/booking.html:26
+msgid "Prenota ora"
+msgstr "احجز الآن"
+
+#: app.py:45 app.py:79
+msgid "reCAPTCHA non superato"
+msgstr "فشل التحقق من reCAPTCHA"
+
+#: app.py:49 app.py:83
+msgid "Compila tutti i campi obbligatori"
+msgstr "يرجى ملء جميع الحقول المطلوبة"
+
+#: app.py:70
+msgid "Nuova prenotazione ricevuta"
+msgstr "تم استلام حجز جديد"
+
+#: app.py:95
+msgid "Messaggio inviato, grazie!"
+msgstr "تم إرسال الرسالة، شكراً لك!"
+
+#: templates/contact.html:3
+msgid "Contatti"
+msgstr "اتصل بنا"
+
+#: templates/contact.html:6
+msgid "Contattaci"
+msgstr "اتصل بنا"
+
+#: templates/contact.html:8
+msgid "Messaggio"
+msgstr "الرسالة"
+
+#: templates/contact.html:16
+msgid "Invia messaggio"
+msgstr "أرسل الرسالة"
+
+#: templates/contact.html:6
+msgid "Contattaci"
+msgstr "اتصل بنا"
+
+#: templates/contact.html:8
+msgid "Messaggio"
+msgstr "الرسالة"
+
+#: templates/contact.html:16
+msgid "Invia messaggio"
+msgstr "أرسل الرسالة"
+
+#: app.py:95
+msgid "Messaggio inviato, grazie!"
+msgstr "تم إرسال الرسالة، شكرًا!"
+
+#: app.py:98
+msgid "Nuovo messaggio da contatto"
+msgstr "رسالة جديدة من صفحة الاتصال"

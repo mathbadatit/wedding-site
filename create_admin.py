@@ -1,13 +1,18 @@
-from app import db, User
+from app import app, db, User
+from getpass import getpass
 
-db.create_all()
+def create_admin():
+    with app.app_context():
+        username = input("Username admin: ")
+        password = getpass("Password admin: ")
+        if User.query.filter_by(username=username).first():
+            print("Utente già esistente.")
+            return
+        user = User(username=username)
+        user.set_password(password)
+        db.session.add(user)
+        db.session.commit()
+        print("Admin creato con successo.")
 
-# Crea admin con username admin e password admin123
-if not User.query.filter_by(username='admin').first():
-    admin = User(username='admin')
-    admin.set_password('admin123')
-    db.session.add(admin)
-    db.session.commit()
-    print('Admin creato.')
-else:
-    print('Admin già esistente.')
+if __name__ == '__main__':
+    create_admin()

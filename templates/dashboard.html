@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Dashboard') }}{% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+{% endblock %}
+{% block content %}
+<body class="admin">
+  <div class="sidebar">
+    <a href="{{ url_for('dashboard') }}">{{ _('Dashboard') }}</a>
+    <a href="{{ url_for('add_service') }}">{{ _('Aggiungi Servizio') }}</a>
+    <a href="{{ url_for('upload_image') }}">{{ _('Carica Immagine') }}</a>
+    <a href="{{ url_for('logout') }}">{{ _('Logout') }}</a>
+  </div>
+  <div class="main-content">
+    <h2>{{ _('Benvenuto,') }} {{ current_user.username }}!</h2>
+    {% include 'partials/admin_cards.html' %}
+  </div>
+</body>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Contatti') }}{% endblock %}
+
+{% block content %}
+<div class="form-box">
+  <h2>{{ _('Contattaci') }}</h2>
+  <form id="contactForm">
+    <label for="nome">{{ _('Nome') }}</label>
+    <input type="text" name="nome" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" required>
+
+    <label for="messaggio">{{ _('Messaggio') }}</label>
+    <textarea name="messaggio" rows="4" required></textarea>
+
+    <input type="hidden" id="recaptchaToken" name="recaptchaToken">
+    <button type="submit" class="btn">{{ _('Invia messaggio') }}</button>
+    <p id="contactMsg"></p>
+  </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
