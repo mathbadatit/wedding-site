@@ -1,75 +1,176 @@
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; padding: 0;
+  background: #f4f0ea;
   color: #333;
 }
 
 .navbar {
-  background-color: #eee;
-  padding: 10px;
+  background-color: #a77a52;
+  padding: 15px 20px;
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #f4d6a0;
 }
 
 .container {
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgb(0 0 0 / 0.12);
 }
 
 .btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #d85b82;
+  background-color: #a77a52;
   color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #bf4e6f;
-  cursor: pointer;
-}
-
-.form-box {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-top: 20px;
+  background-color: #8a6240;
 }
 
 .form-box label {
-  display: block;
+  font-weight: 600;
   margin-top: 1rem;
-  font-weight: bold;
+  display: block;
+  color: #5a4632;
 }
 
 .form-box input,
 .form-box textarea {
   width: 100%;
-  padding: 0.6rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #d0c7b4;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+  border-color: #a77a52;
+  outline: none;
+  box-shadow: 0 0 5px #a77a52aa;
 }
 
 .form-box button {
-  margin-top: 1.5rem;
-  padding: 0.7rem 1.2rem;
-  background-color: #d4af7f;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-top: 20px;
+  padding: 12px 25px;
 }
 
 #bookingMsg, #contactMsg {
   margin-top: 15px;
   font-weight: bold;
-  min-height: 1.5em;
+  font-size: 1.1rem;
+  min-height: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Animazioni leggere */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-box {
+  animation: fadeInUp 0.6s ease forwards;
+}
+/* Form input focus animation */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #d4af7f;
+  box-shadow: 0 0 8px rgba(212, 175, 127, 0.7);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Pulsante con effetto hover più morbido */
+.btn {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #bf4e6f;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* Animazione messaggi flash */
+.flash {
+  animation: fadein 0.8s ease forwards;
+}
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.form-box {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Dashboard elegante */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+/* Cards servizi */
+.service-card, .gallery-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover, .gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Fade-in standard */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
 }

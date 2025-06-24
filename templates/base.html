@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <title>{% block title %}Wedding{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-  <script>
-    const recaptcha_site_key = "{{ recaptcha_site_key }}";
-  </script>
-  <script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+ <script>
+  const recaptcha_site_key = "{{ recaptcha_site_key }}";
+</script>
+<script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
   <nav class="navbar">

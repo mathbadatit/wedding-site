@@ -122,3 +122,12 @@ msgstr "Messaggio inviato, grazie!"
 #: app.py:98
 msgid "Nuovo messaggio da contatto"
 msgstr "Nuovo messaggio da contatto"
+#: app.py
+msgid "Conferma prenotazione"
+msgstr "Conferma prenotazione"
+
+msgid "Ciao {nome},\n\nAbbiamo ricevuto la tua prenotazione per il {data}.\nGrazie!\n\nWedding Team"
+msgstr "Ciao {nome},\n\nAbbiamo ricevuto la tua prenotazione per il {data}.\nGrazie!\n\nWedding Team"
+
+msgid "Dashboard"
+msgstr "Dashboard"

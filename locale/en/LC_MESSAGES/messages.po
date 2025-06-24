@@ -122,3 +122,11 @@ msgstr "Message sent, thank you!"
 #: app.py:98
 msgid "Nuovo messaggio da contatto"
 msgstr "New contact message"
+msgid "Conferma prenotazione"
+msgstr "Booking Confirmation"
+
+msgid "Ciao {nome},\n\nAbbiamo ricevuto la tua prenotazione per il {data}.\nGrazie!\n\nWedding Team"
+msgstr "Hi {nome},\n\nWe received your booking for {data}.\nThank you!\n\nWedding Team"
+
+msgid "Dashboard"
+msgstr "Dashboard"

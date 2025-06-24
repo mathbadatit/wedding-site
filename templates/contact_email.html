@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff4f7; padding: 20px; }
+    .email-container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 6px; }
+    h2 { color: #d85b82; }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <h2>Ciao {{ nome }},</h2>
+    <p>Grazie per averci contattato!</p>
+    <p>Il tuo messaggio è stato ricevuto e ti risponderemo al più presto.</p>
+    <p><strong>Riepilogo:</strong></p>
+    <ul>
+      <li>Email: {{ email }}</li>
+      <li>Messaggio: {{ messaggio }}</li>
+    </ul>
+    <p>Un caro saluto,<br>Wedding Team</p>
+  </div>
+</body>
+</html>

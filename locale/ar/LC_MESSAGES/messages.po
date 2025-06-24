@@ -122,3 +122,11 @@ msgstr "تم إرسال الرسالة، شكرًا!"
 #: app.py:98
 msgid "Nuovo messaggio da contatto"
 msgstr "رسالة جديدة من صفحة الاتصال"
+msgid "Conferma prenotazione"
+msgstr "تأكيد الحجز"
+
+msgid "Ciao {nome},\n\nAbbiamo ricevuto la tua prenotazione per il {data}.\nGrazie!\n\nWedding Team"
+msgstr "مرحبًا {nome}،\n\nلقد استلمنا حجزك بتاريخ {data}.\nشكرًا لك!\n\nفريق الزفاف"
+
+msgid "Dashboard"
+msgstr "لوحة التحكم"

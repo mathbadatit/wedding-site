@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Dashboard Admin{% endblock %}
+
+{% block content %}
+<section class="admin-hero">
+  <h2>🎛️ Benvenuto, {{ current_user.username }}</h2>
+  <p>Gestione servizi, galleria e prenotazioni</p>
+</section>
+
+<div class="admin-panel">
+  <a href="{{ url_for('add_service') }}" class="btn">➕ Aggiungi Servizio</a>
+  <a href="{{ url_for('upload_image') }}" class="btn">🖼️ Carica Immagine</a>
+  <a href="{{ url_for('create_user') }}" class="btn">👤 Crea Utente</a>
+</div>
+
+<section class="section-dashboard">
+  <h3>📷 Ultime immagini caricate</h3>
+  <div class="gallery-grid">
+    {% for image in images %}
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/' ~ image.filename) }}">
+      <p>{{ image.caption }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
+<section class="admin-hero">
+  <h1>Dashboard</h1>
+  <p>Hai ricevuto {{ bookings|length }} prenotazioni.</p>
+  <p>{{ services|length }} servizi attivi - {{ images|length }} immagini caricate.</p>
+</section>
