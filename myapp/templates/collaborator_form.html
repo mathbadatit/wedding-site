@@ -1,0 +1,53 @@
+{% extends 'base_admin.html' %}
+
+{% block title %}{{ _('Modifica Collaboratore') if collaborator else _('Aggiungi Collaboratore') }}{% endblock %}
+
+{% block content %}
+  <h1 class="text-center mb-4">
+    {{ _('Modifica Collaboratore') if collaborator else _('Aggiungi Nuovo Collaboratore') }}
+  </h1>
+
+  <form method="POST" enctype="multipart/form-data" class="admin-form">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+      {{ form.category.label }}
+      {{ form.category(class_="form-control", placeholder="Categoria (es. fotografo)") }}
+      {% for e in form.category.errors %}
+      <div class="text-danger small">{{ e }}</div>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.name.label }}
+      {{ form.name(class_="form-control", placeholder="Nome collaboratore") }}
+      {% for e in form.name.errors %}
+      <div class="text-danger small">{{ e }}</div>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.description.label }}
+      {{ form.description(class_="form-control", rows=4, placeholder="Descrizione") }}
+      {% for e in form.description.errors %}
+      <div class="text-danger small">{{ e }}</div>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.image.label }}
+      {{ form.image(class_="form-control") }}
+      {% if collaborator and collaborator.image_filename %}
+        <small>{{ _('Immagine attuale:') }} {{ collaborator.image_filename }}</small>
+      {% endif %}
+      {% for e in form.image.errors %}
+      <div class="text-danger small">{{ e }}</div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center">
+      {{ form.submit(class_="btn") }}
+      <a href="{{ url_for('dashboard') }}" class="btn btn-secondary ms-2">{{ _('Annulla') }}</a>
+    </div>
+  </form>
+{% endblock %}

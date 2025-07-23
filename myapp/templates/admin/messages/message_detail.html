@@ -1,0 +1,15 @@
+{% extends 'base_admin.html' %}
+{% block title %}Messaggio da {{ message.sender_name }}{% endblock %}
+{% block page_title %}Messaggio: {{ message.subject }}{% endblock %}
+
+{% block content %}
+<div class="mb-3">
+  <strong>Mittente:</strong> {{ message.sender_name }} ({{ message.sender_email }})<br>
+  <strong>Data invio:</strong> {{ message.date_sent.strftime('%d/%m/%Y %H:%M') }}
+</div>
+<div class="mb-3">
+  <strong>Contenuto:</strong>
+  <p style="white-space: pre-wrap;">{{ message.content }}</p>
+</div>
+<a href="{{ url_for('message_list') }}" class="btn btn-secondary">Indietro</a>
+{% endblock %}

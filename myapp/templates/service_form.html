@@ -1,0 +1,49 @@
+{% extends 'base_admin.html' %}
+
+{% block title %}{{ _('Modifica Servizio') if action == 'edit' else _('Crea Servizio') }}{% endblock %}
+
+{% block content %}
+  <h1 class="text-center mb-4">
+    {{ _('Modifica Servizio') if action == 'edit' else _('Crea Nuovo Servizio') }}
+  </h1>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+  <form method="POST" class="admin-form">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+      {{ form.title_it.label }}
+      {{ form.title_it(class_="form-control", placeholder="Titolo Italiano") }}
+    </div>
+    <div class="mb-3">
+      {{ form.title_en.label }}
+      {{ form.title_en(class_="form-control", placeholder="Titolo Inglese") }}
+    </div>
+    <div class="mb-3">
+      {{ form.title_ar.label }}
+      {{ form.title_ar(class_="form-control", placeholder="Titolo Arabo") }}
+    </div>
+    <div class="mb-3">
+      {{ form.description_it.label }}
+      {{ form.description_it(class_="form-control", placeholder="Descrizione IT") }}
+    </div>
+    <div class="mb-3">
+      {{ form.description_en.label }}
+      {{ form.description_en(class_="form-control", placeholder="Descrizione EN") }}
+    </div>
+    <div class="mb-3">
+      {{ form.description_ar.label }}
+      {{ form.description_ar(class_="form-control", placeholder="Descrizione AR") }}
+    </div>
+
+    <div class="text-center">
+      {{ form.submit(class_="btn") }}
+    </div>
+  </form>
+{% endblock %}

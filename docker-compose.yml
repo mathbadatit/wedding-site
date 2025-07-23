@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    restart: always
+    command: gunicorn -b 0.0.0.0:8000 "manage:app" --workers 4 --log-level info
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=your_secret_key_here
+      - DATABASE_URL=postgresql://myuser:mypassword@db:5432/weddingdb
+      - MAIL_USERNAME=your_email@gmail.com
+      - MAIL_PASSWORD=your_mail_app_password
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: weddingdb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./static:/app/static:ro
+    depends_on:
+      - web
+
+volumes:
+  pgdata:

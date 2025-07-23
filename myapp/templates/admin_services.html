@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Gestione Servizi{% endblock %}
+{% block content %}
+<h2 class="mb-4">Gestione Servizi</h2>
+<div class="admin-section">
+  <form id="serviceForm" class="admin-form mb-4">
+    <input type="hidden" name="id">
+    <input type="text" name="title" placeholder="Titolo" required>
+    <textarea name="description" placeholder="Descrizione" required></textarea>
+    <input type="text" name="image_url" placeholder="URL Immagine">
+    <button type="submit" class="btn btn-primary">Salva</button>
+  </form>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th><th>Titolo</th><th>Descrizione</th><th>Immagine</th><th>Azioni</th>
+      </tr>
+    </thead>
+    <tbody id="servicesTable"></tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/admin_services.js') }}"></script>
+{% endblock %}

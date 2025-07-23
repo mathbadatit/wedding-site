@@ -1,0 +1,43 @@
+{% extends 'base_admin.html' %}
+
+{% block title %}{{ _('Modifica Utente') if user else _('Aggiungi Utente') }}{% endblock %}
+
+{% block content %}
+  <h1 class="text-center mb-4">
+    {{ _('Modifica Utente') if user else _('Crea Nuovo Utente') }}
+  </h1>
+
+  <form method="POST" class="admin-form">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+      {{ form.username.label }}
+      {{ form.username(class_="form-control", placeholder="Nome utente") }}
+      {% for e in form.username.errors %}
+      <div class="text-danger small">{{ e }}</div>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.password.label }}
+      {{ form.password(class_="form-control", placeholder="Password") }}
+      <small class="form-text text-muted">{{ _('Lascia vuoto per mantenere la password corrente') }}</small>
+      {% for e in form.password.errors %}
+      <div class="text-danger small">{{ e }}</div>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.role.label }}
+      {{ form.role(class_="form-select") }}
+      {% for e in form.role.errors %}
+      <div class="text-danger small">{{ e }}</div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center">
+      {{ form.submit(class_="btn") }}
+      <a href="{{ url_for('dashboard') }}" class="btn btn-secondary ms-2">{{ _('Annulla') }}</a>
+    </div>
+  </form>
+{% endblock %}

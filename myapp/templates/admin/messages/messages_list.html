@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}{{ _('Messaggi') }}{% endblock %}
+{% block content %}
+<div class="container mt-4">
+  <h1>{{ _('Messaggi ricevuti') }}</h1>
+
+  <input id="searchInput" type="text" class="form-control mb-3" placeholder="{{ _('Cerca...') }}">
+
+  <table class="table table-striped" id="messagesTable">
+    <thead>
+      <tr>
+        <th>{{ _('Nome') }}</th>
+        <th>{{ _('Email') }}</th>
+        <th>{{ _('Oggetto') }}</th>
+        <th>{{ _('Data') }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for msg in messages %}
+      <tr data-id="{{ msg.id }}" data-email="{{ msg.sender_email }}">
+        <td>{{ msg.sender_name }}</td>
+        <td>{{ msg.sender_email }}</td>
+        <td>{{ msg.subject }}</td>
+        <td>{{ msg.date_sent.strftime('%Y-%m-%d %H:%M') }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <button class="btn btn-primary mb-3" id="exportExcelBtn">{{ _('Esporta in Excel') }}</button>
+
+  <h3>{{ _('Rispondi al messaggio') }}</h3>
+  <form id="replyForm" method="post" action="{{ url_for('send_reply_email') }}">
+    <input type="hidden" name="recipient_email" id="recipientEmail">
+    <div class="mb-3">
+      <label for="replySubject" class="form-label">{{ _('Oggetto') }}</label>
+      <input type="text" class="form-control" id="replySubject" name="subject" required>
+    </div>
+    <div class="mb-3">
+      <label for="replyContent" class="form-label">{{ _('Messaggio') }}</label>
+      <textarea class="form-control" id="replyContent" name="content" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">{{ _('Invia Email') }}</button>
+  </form>
+</div>
+
+<script>
+  // Ricerca live in tabella
+  document.getElementById('searchInput').addEventListener('input', function() {
+    const filter = this.value.toLowerCase();
+    const rows = document.querySelectorAll('#messagesTable tbody tr');
+    rows.forEach(row => {
+      const text = row.textContent.toLowerCase();
+      row.style.display = text.includes(filter) ? '' : 'none';
+    });
+  });
+
+  // Quando clicco su riga della tabella, precompilo il campo email per risposta
+  document.querySelectorAll('#messagesTable tbody tr').forEach(row => {
+    row.addEventListener('click', () => {
+      const email = row.getAttribute('data-email');
+      const subject = 'Re: ' + row.cells[2].textContent;
+      document.getElementById('recipientEmail').value = email;
+      document.getElementById('replySubject').value = subject;
+      document.getElementById('replyContent').value = '';
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+  });
+
+  // Pulsante esporta Excel
+  document.getElementById('exportExcelBtn').addEventListener('click', () => {
+    window.location.href = "{{ url_for('export_messages_xlsx') }}";
+  });
+</script>
+{% endblock %}

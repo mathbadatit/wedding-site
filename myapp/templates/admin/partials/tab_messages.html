@@ -1,0 +1,21 @@
+<h3>📩 Messaggi ricevuti</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Telefono</th>
+      <th>Messaggio</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for msg in messages %}
+    <tr>
+      <td>{{ msg.name }}</td>
+      <td>{{ msg.email }}</td>
+      <td>{{ msg.phone }}</td>
+      <td>{{ msg.message[:100] }}...</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

@@ -1,1 +1,0 @@
-print("✅ Python funziona qui")

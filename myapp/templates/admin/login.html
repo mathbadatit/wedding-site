@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+{% block meta_description %}{{ _('Accedi alla dashboard per gestire i servizi matrimoniali e le prenotazioni.') }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <h1>{{ _('Dashboard') }}</h1>
+  <p>{{ _('Benvenuto,') }} {{ current_user.username }}!</p>
+  
+  <hr>
+
+  <h3>{{ _('Servizi') }}</h3>
+  <a href="{{ url_for('service_create') }}" class="btn btn-success mb-3">{{ _('Aggiungi Servizio') }}</a>
+
+  <table class="table table-striped table-bordered align-middle">
+    <thead class="table-dark">
+      <tr>
+        <th>{{ _('ID') }}</th>
+        <th>{{ _('Nome') }}</th>
+        <th>{{ _('Descrizione') }}</th>
+        <th>{{ _('Azioni') }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for service in services %}
+      <tr>
+        <td>{{ service.id }}</td>
+        <td>{{ service.name }}</td>
+        <td>{{ service.description }}</td>
+        <td>
+          <a href="{{ url_for('service_edit', service_id=service.id) }}" class="btn btn-sm btn-warning">{{ _('Modifica') }}</a>
+          <form method="POST" action="{{ url_for('service_delete', service_id=service.id) }}" class="d-inline" onsubmit="return confirmDelete();">
+            <button type="submit" class="btn btn-sm btn-danger">{{ _('Elimina') }}</button>
+          </form>
+        </td>
+      </tr>
+      {% else %}
+      <tr>
+        <td colspan="4">{{ _('Nessun servizio presente.') }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<script>
+function confirmDelete() {
+  return confirm("{{ _('Sei sicuro di voler eliminare questo servizio?') }}");
+}
+</script>
+
+<form method="post">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }} {{ form.username() }}
+    {{ form.password.label }} {{ form.password() }}
+    {{ form.recaptcha }}  {# questo mostrerà il reCAPTCHA #}
+    {{ form.submit() }}
+</form>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="mt-2">
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+{% endblock %}

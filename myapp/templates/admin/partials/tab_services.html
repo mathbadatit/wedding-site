@@ -1,0 +1,12 @@
+<div id="tab-services" class="tab-content active" role="tabpanel" aria-labelledby="tab-btn-services" tabindex="0">
+  <h2>{{ _('Servizi') }} <span class="badge bg-primary">{{ services|length }}</span></h2>
+  <a href="{{ url_for('export_services') }}" class="btn btn-outline-primary mb-2">🧾 {{ _('Esporta Servizi (CSV)') }}</a>
+  <a href="{{ url_for('service_create') }}" class="btn-add">+ {{ _('Aggiungi Servizio') }}</a>
+  <ul>
+    {% for s in services %}
+      <li>{{ s.title_it or s.title_en or s.title_ar }}</li>
+    {% else %}
+      <li>{{ _('Nessun servizio presente.') }}</li>
+    {% endfor %}
+  </ul>
+</div>

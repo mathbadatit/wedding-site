@@ -1,0 +1,408 @@
+/* ====================
+   Palette Colori
+==================== */
+:root {
+  --rosa-antico: #d8a39d;
+  --oro: #c6a664;
+  --bianco: #ffffff;
+  --grigio-chiaro: #f8f8f8;
+  --nero: #111111;
+  --grigio-testo: #555555;
+  --accento: #c68c73;
+}
+
+/* ====================
+   Font Base
+==================== */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bianco);
+  color: var(--grigio-testo);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  color: var(--nero);
+}
+
+a {
+  text-decoration: none;
+  color: var(--rosa-antico);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--oro);
+}
+
+/* ====================
+   Navbar
+==================== */
+.navbar {
+  background-color: var(--bianco);
+  padding: 15px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* ====================
+   Lingue - bandiere sticky bottom
+==================== */
+.language-flags {
+  position: fixed;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  z-index: 999;
+}
+
+.language-flags img {
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.language-flags img:hover {
+  transform: scale(1.1);
+}
+
+/* ====================
+   Container principale
+==================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* ====================
+   Hero Section
+==================== */
+.hero-section {
+  text-align: center;
+  margin: 50px 0;
+  animation: fade-in 1s ease-in-out;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: var(--nero);
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: var(--rosa-antico);
+}
+
+/* ====================
+   Sezione Servizi
+==================== */
+.services-section {
+  margin: 60px 0;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.service-item {
+  flex: 1 1 280px;
+  background-color: var(--grigio-chiaro);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.service-item h3 {
+  margin-top: 0;
+  color: var(--oro);
+}
+
+.service-item p {
+  margin-bottom: 0;
+}
+
+/* ====================
+   Galleria
+==================== */
+.gallery-preview {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.gallery-images img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05);
+}
+
+/* ====================
+   Form (Prenotazione, Login)
+==================== */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--grigio-chiaro);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  animation: fade-in 0.8s ease-in-out;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--nero);
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form input, form textarea {
+  transition: all 0.3s ease-in-out;
+}
+
+form input:focus, form textarea:focus {
+  box-shadow: 0 0 5px rgba(255, 182, 193, 0.7); /* rosa chiaro */
+  border-color: #ffb6c1;
+}
+
+form button {
+  background-color: var(--rosa-antico);
+  color: var(--bianco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+form button:hover {
+  background-color: var(--accento);
+}
+
+/* ====================
+   Messaggi flash
+==================== */
+.alert {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger,
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* ====================
+   Animazioni
+==================== */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Loader */
+.loader-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--bianco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--rosa-antico);
+  border-top: 4px solid var(--oro);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* ====================
+   Bottone "Torna su"
+==================== */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 25px;
+  z-index: 1000;
+  font-size: 22px;
+  background-color: var(--rosa-antico);
+  color: var(--bianco);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: var(--accento);
+}
+
+/* ====================
+   Media Query Responsive
+==================== */
+@media (max-width: 768px) {
+  .services-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .gallery-images img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Optional dark mode (commenta se non vuoi) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111111;
+    color: #eeeeee;
+  }
+  .service-item {
+    background-color: #222222;
+    color: #eeeeee;
+  }
+  form input, form textarea {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  form button {
+    background-color: #f3c369;
+    color: #111111;
+  }
+}
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+
+body.dark-mode .navbar {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode a {
+  color: var(--oro);
+}
+
+body.dark-mode a:hover {
+  color: var(--rosa-antico);
+}
+
+body.dark-mode .service-item,
+body.dark-mode form {
+  background-color: #222;
+  color: #fff;
+}
+/* =====================
+   Backoffice Styles
+===================== */
+.admin-layout {
+  padding: 20px;
+}
+
+.admin-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.admin-card {
+  flex: 1 1 300px;
+  background: var(--grigio-chiaro);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .admin-section {
+    flex-direction: column;
+  }
+}

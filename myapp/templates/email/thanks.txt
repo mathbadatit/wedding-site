@@ -1,0 +1,5 @@
+Ciao {{ booking.nome }},
+
+Grazie per aver prenotato con noi! Ti contatteremo al più presto per confermare i dettagli.
+
+Il team di Wedding Nora

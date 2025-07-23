@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Messaggi di Contatto') }}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-3">📬 {{ _('Messaggi di contatto') }}</h2>
+  <p><strong>{{ _('Messaggi non letti') }}:</strong> {{ unread_count }}</p>
+
+  <input id="searchInput" type="text" class="form-control mb-3" placeholder="{{ _('Cerca...') }}">
+
+  <table class="table table-bordered table-hover" id="messagesTable">
+    <thead class="table-light">
+      <tr>
+        <th>{{ _('Nome') }}</th>
+        <th>{{ _('Email') }}</th>
+        <th>{{ _('Telefono') }}</th>
+        <th>{{ _('Oggetto') }}</th>
+        <th>{{ _('Motivo') }}</th>
+        <th>{{ _('Messaggio') }}</th>
+        <th>{{ _('Data') }}</th>
+        <th>{{ _('Stato') }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for msg in contact_messages %}
+      <tr class="{% if not msg.is_read %}table-warning{% endif %}"
+          data-email="{{ msg.email }}"
+          data-subject="{{ msg.subject }}">
+        <td>{{ msg.name }}</td>
+        <td>{{ msg.email }}</td>
+        <td>{{ msg.phone }}</td>
+        <td>{{ msg.subject }}</td>
+        <td>{{ msg.reason }}</td>
+        <td>{{ msg.message }}</td>
+        <td>{{ msg.date.strftime('%d/%m/%Y %H:%M') }}</td>
+        <td>
+          <form method="POST" action="{{ url_for('toggle_read', msg_id=msg.id) }}">
+            <button class="btn btn-sm {% if msg.is_read %}btn-outline-secondary{% else %}btn-success{% endif %}">
+              {% if msg.is_read %}{{ _('Letto') }}{% else %}{{ _('Non letto') }}{% endif %}
+            </button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <button class="btn btn-outline-primary mb-4" id="exportExcelBtn">{{ _('Esporta in Excel') }}</button>
+
+  <h4 class="mt-5">{{ _('Rispondi al messaggio') }}</h4>
+  <form id="replyForm" method="post" action="{{ url_for('send_reply_email') }}">
+    <input type="hidden" name="recipient_email" id="recipientEmail">
+    <div class="mb-3">
+      <label for="replySubject" class="form-label">{{ _('Oggetto') }}</label>
+      <input type="text" class="form-control" id="replySubject" name="subject" required>
+    </div>
+    <div class="mb-3">
+      <label for="replyContent" class="form-label">{{ _('Messaggio') }}</label>
+      <textarea class="form-control" id="replyContent" name="content" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">{{ _('Invia Email') }}</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('searchInput').addEventListener('input', function () {
+    const filter = this.value.toLowerCase();
+    document.querySelectorAll('#messagesTable tbody tr').forEach(row => {
+      row.style.display = row.textContent.toLowerCase().includes(filter) ? '' : 'none';
+    });
+  });
+
+  document.querySelectorAll('#messagesTable tbody tr').forEach(row => {
+    row.addEventListener('click', () => {
+      document.getElementById('recipientEmail').value = row.dataset.email;
+      document.getElementById('replySubject').value = 'Re: ' + row.dataset.subject;
+      document.getElementById('replyContent').value = '';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+  });
+
+  document.getElementById('exportExcelBtn').addEventListener('click', () => {
+    window.location.href = "{{ url_for('export_contacts_excel') }}";
+  });
+</script>
+{% endblock %}

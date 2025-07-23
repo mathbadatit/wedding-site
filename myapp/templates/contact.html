@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Contatti') }}{% endblock %}
+{% block meta_description %}{{ _('Contatta i nostri wedding planner in Italia. Risposte rapide, servizi su misura.') }}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="mb-4 text-center">{{ _('Contattaci') }}</h1>
+
+  <form method="POST" action="{{ url_for('main.contact') }}" class="mx-auto" style="max-width: 600px;" id="contactForm">
+    {{ form.hidden_tag() }}
+    <input type="hidden" name="recaptchaToken" id="recaptchaToken">
+
+    <div class="mb-3">
+      {{ form.name.label(class="form-label") }}
+      {{ form.name(class="form-control", placeholder=_('Inserisci il tuo nome')) }}
+    </div>
+
+    <div class="mb-3">
+      {{ form.email.label(class="form-label") }}
+      {{ form.email(class="form-control", placeholder=_('Inserisci la tua email')) }}
+    </div>
+
+    <div class="mb-3">
+      {{ form.phone.label(class="form-label") }}
+      {{ form.phone(class="form-control", placeholder=_('Inserisci il tuo numero di telefono')) }}
+    </div>
+
+    <div class="mb-3">
+      {{ form.subject.label(class="form-label") }}
+      {{ form.subject(class="form-control", placeholder=_('Oggetto del messaggio')) }}
+    </div>
+
+    <div class="mb-3">
+      {{ form.reason.label(class="form-label") }}
+      {{ form.reason(class="form-select") }}
+    </div>
+
+    <div class="mb-3">
+      {{ form.message.label(class="form-label") }}
+      {{ form.message(class="form-control", rows="5", placeholder=_('Scrivi il tuo messaggio')) }}
+    </div>
+
+    <div class="form-check mb-3">
+      {{ form.gdpr(class="form-check-input") }}
+      {{ form.gdpr.label(class="form-check-label") }}
+    </div>
+
+    <div class="text-center">
+      {{ form.submit(class="btn btn-primary") }}
+    </div>
+  </form>
+
+  <div class="mt-5">
+    <h2 class="text-center">{{ _('Dove siamo') }}</h2>
+    <div class="ratio ratio-16x9">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."
+        width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- reCAPTCHA v3 script -->
+<script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
+<script>
+  grecaptcha.ready(function () {
+    grecaptcha.execute('{{ recaptcha_site_key }}', { action: 'contact' }).then(function (token) {
+      document.getElementById('recaptchaToken').value = token;
+    });
+  });
+</script>
+{% endblock %}

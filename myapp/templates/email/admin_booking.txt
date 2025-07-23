@@ -1,0 +1,8 @@
+Hai ricevuto una nuova prenotazione:
+
+Nome: {{ booking.nome }}
+Email: {{ booking.email }}
+Telefono: {{ booking.telefono }}
+Data: {{ booking.data }}
+Location: {{ booking.location }}
+Budget: {{ booking.budget }}

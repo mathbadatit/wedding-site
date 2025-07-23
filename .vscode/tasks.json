@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Reset Database",
+            "type": "shell",
+            "command": "flask reset-db",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Migrate Database",
+            "type": "shell",
+            "command": "flask migrate-db",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Create Admin User",
+            "type": "shell",
+            "command": "flask create-admin",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Flask Server",
+            "type": "shell",
+            "command": "flask run",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Aggiorna Traduzioni",
+            "type": "shell",
+            "command": "python scripts/update_translations.py",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}

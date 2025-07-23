@@ -1,0 +1,47 @@
+{% extends 'base_admin.html' %}
+{% block title %}Dettaglio Prenotazione{% endblock %}
+{% block page_title %}Prenotazione di {{ booking.customer_name }}{% endblock %}
+
+{% block content %}
+<form method="POST" class="admin-form">
+  <div class="mb-3">
+    <label>Nome Cliente</label>
+    <input type="text" class="form-control" value="{{ booking.customer_name }}" disabled>
+  </div>
+  <div class="mb-3">
+    <label>Email Cliente</label>
+    <input type="email" class="form-control" value="{{ booking.customer_email }}" disabled>
+  </div>
+  <div class="mb-3">
+    <label>Data</label>
+    <input type="text" class="form-control" value="{{ booking.date.strftime('%d/%m/%Y %H:%M') }}" disabled>
+  </div>
+  <div class="mb-3">
+    <label>Location</label>
+    <input type="text" class="form-control" value="{{ booking.location }}" disabled>
+  </div>
+  <div class="mb-3">
+    <label>Budget</label>
+    <input type="text" class="form-control" value="{{ booking.budget }}" disabled>
+  </div>
+  <div class="mb-3">
+    <label for="status">Stato</label>
+    <select name="status" id="status" class="form-select">
+      <option value="In attesa" {% if booking.status == 'In attesa' %}selected{% endif %}>In attesa</option>
+      <option value="Confermato" {% if booking.status == 'Confermato' %}selected{% endif %}>Confermato</option>
+      <option value="Annullato" {% if booking.status == 'Annullato' %}selected{% endif %}>Annullato</option>
+    </select>
+  </div>
+  <div class="mb-3">
+  <label>Telefono</label>
+  <input type="text" class="form-control" value="{{ booking.customer_phone }}" disabled>
+</div>
+
+<div class="mb-3">
+  <label>Messaggio</label>
+  <textarea class="form-control" rows="4" disabled>{{ booking.message }}</textarea>
+</div>
+  <button type="submit" class="btn btn-primary">Salva</button>
+  <a href="{{ url_for('booking_list') }}" class="btn btn-secondary">Indietro</a>
+</form>
+{% endblock %}

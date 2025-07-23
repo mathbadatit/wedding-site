@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "🐍 Debug Flask App",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": ["run"],
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "jinja": true
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+/* Override RTL */
+
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+.navbar-nav.ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.navbar-nav.ms-auto .nav-item {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+}
+
+.navbar-brand {
+    float: right !important;
+}
+
+.theme-toggle {
+    float: left !important;
+}
+
+/* Per elementi che vanno invertiti */
+
+.dropdown-menu.dropdown-menu-end {
+    right: auto !important;
+    left: 0 !important;
+}
+
+/* Aggiusta margini e padding generici se serve */
+
+.container {
+    text-align: right;
+}

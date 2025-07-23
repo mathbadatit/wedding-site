@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Carica Immagine Galleria') }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4" style="max-width: 500px;">
+  <h2>{{ _('Carica nuova immagine') }}</h2>
+  <form method="POST" action="" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+      {{ form.image.label(class="form-label") }}
+      {{ form.image(class="form-control") }}
+      {% for e in form.image.errors %}
+      <div class="text-danger small">{{ e }}</div>
+      {% endfor %}
+    </div>
+
+    <button type="submit" class="btn btn-primary">{{ _('Carica') }}</button>
+    <a href="{{ url_for('dashboard') }}" class="btn btn-secondary ms-2">{{ _('Annulla') }}</a>
+  </form>
+</div>
+{% endblock %}

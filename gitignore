@@ -1,4 +1,16 @@
-instance/
-*.pyc
-.env
 __pycache__/
+.venv/
+instance/
+.env
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+*.log
+*.bak
+
+migrations/__pycache__/
+
+# Traduzioni generate (solo i .mo non i .po)
+translations/*/LC_MESSAGES/*.mo

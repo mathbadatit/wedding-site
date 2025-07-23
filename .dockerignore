@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.env
+.venv/
+instance/uploads/
+translations/messages.pot
+migrations/

@@ -1,0 +1,23 @@
+<h3>🖼️ Gestione Galleria</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Immagine</th>
+      <th>Ordine</th>
+      <th>Azioni</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for image in images %}
+    <tr>
+      <td><img src="{{ url_for('uploaded_file', filename=image.filename) }}" width="100"></td>
+      <td>{{ image.order }}</td>
+      <td>
+        <form method="post" action="{{ url_for('main.gallery_delete', image_id=image.id) }}">
+          <button type="submit" class="btn btn-danger btn-sm">❌ Elimina</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

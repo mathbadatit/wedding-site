@@ -1,0 +1,23 @@
+{% extends 'base_admin.html' %}
+
+{% block title %}{{ _('Carica Immagine Galleria') }}{% endblock %}
+
+{% block content %}
+  <h1 class="text-center mb-4">{{ _('Carica Nuova Immagine') }}</h1>
+
+  <form method="POST" enctype="multipart/form-data" class="admin-form">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+      {{ form.image.label }}
+      {{ form.image(class_="form-control") }}
+      {% for e in form.image.errors %}
+      <div class="text-danger small">{{ e }}</div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center">
+      {{ form.submit(class_="btn") }}
+    </div>
+  </form>
+{% endblock %}

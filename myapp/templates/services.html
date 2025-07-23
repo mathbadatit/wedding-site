@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Servizi') }}{% endblock %}
+{% block meta_description %}{{ _('Scopri tutti i servizi per il tuo matrimonio da sogno: location, catering, allestimenti e molto altro.') }}{% endblock %}
+
+{% block content %}
+<section class="hero-section fade-in">
+  <h1>{{ _('Scopri i nostri servizi esclusivi') }}</h1>
+  <p>{{ _('Dalla pianificazione all’allestimento, ogni dettaglio è curato con stile.') }}</p>
+</section>
+
+<section class="services-section fade-in">
+  <h2 class="section-title">{{ _('I nostri Servizi') }}</h2>
+  <div class="services-list">
+    {% for s in services %}
+      <div class="service-item">
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.description }}</p>
+      </div>
+    {% else %}
+      <p>{{ _('Nessun servizio disponibile al momento.') }}</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

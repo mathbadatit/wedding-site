@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Dashboard Admin{% endblock %}
+
+{% include 'admin/partials/admin_cards.html' %}
+{% include 'admin/partials/tab_services.html' %}
+{% include 'admin/partials/tab_gallery.html' %}
+{% include 'admin/partials/tab_messages.html' %}
+{% include 'admin/partials/tab_users.html' %}
+
+{% block content %}
+<section class="admin-hero">
+  <h2>🎛️ Benvenuto, {{ current_user.username }}</h2>
+  <p>Gestione servizi, galleria e prenotazioni</p>
+  <p>📬 Prenotazioni: {{ bookings|length }}</p>
+  <p>🎁 Servizi: {{ services|length }} | 🖼️ Immagini: {{ images|length }}</p>
+</section>
+
+<h2>🕵️‍♀️ Cronologia Azioni Admin</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Utente</th>
+      <th>Azione</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for log in logs %}
+<tr>
+  <td>{{ log.timestamp.strftime('%d/%m/%Y %H:%M') }}</td>
+  <td>{{ log.user.username }}</td>
+  <td>{{ log.action }}</td>
+</tr>
+{% endfor %}
+
+  </tbody>
+</table>
+
+<div class="admin-panel">
+  <a href="{{ url_for('add_service') }}" class="btn">➕ Aggiungi Servizio</a>
+  <a href="{{ url_for('upload_image') }}" class="btn">🖼️ Carica Immagine</a>
+  <a href="{{ url_for('create_user') }}" class="btn">👤 Crea Utente</a>
+</div>
+
+<section class="section-dashboard">
+  <h3>📷 Ultime immagini caricate</h3>
+  <div class="gallery-grid">
+    {% for image in images %}
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/' ~ image.filename) }}">
+      <p>{{ image.caption }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="admin-export">
+  <h3>📤 Esporta dati</h3>
+  <a href="{{ url_for('main.export_messages_csv') }}" class="btn btn-outline-primary">⬇️ Esporta Contatti (CSV)</a>
+  <a href="{{ url_for('main.export_bookings_excel') }}" class="btn btn-outline-success">⬇️ Esporta Prenotazioni (Excel)</a>
+</section>
+
+{% endblock %}

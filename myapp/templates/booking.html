@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}{{ _('Prenota il tuo matrimonio') }}{% endblock %}
+{% block meta_description %}{{ _('Prenota ora il tuo matrimonio in Italia: invia i tuoi dettagli, scegli la location e ricevi un preventivo personalizzato.') }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="text-center mb-4">{{ _('Prenota il tuo matrimonio') }}</h1>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+  <form method="POST" class="booking-form" novalidate>
+    {{ form.hidden_tag() }}
+    <input type="hidden" name="recaptchaToken" id="recaptchaToken">
+
+    <div class="mb-3">
+      {{ form.name.label }}
+      {{ form.name(class_="form-control", placeholder=_("Il tuo nome completo")) }}
+    </div>
+    <div class="mb-3">
+      {{ form.email.label }}
+      {{ form.email(class_="form-control", placeholder=_("Indirizzo email")) }}
+    </div>
+    <div class="mb-3">
+      {{ form.phone.label }}
+      {{ form.phone(class_="form-control", placeholder=_("Numero di telefono")) }}
+    </div>
+    <div class="mb-3">
+      {{ form.location.label }}
+      {{ form.location(class_="form-control", placeholder=_("Luogo desiderato per il matrimonio")) }}
+    </div>
+    <div class="mb-3">
+      {{ form.budget.label }}
+      {{ form.budget(class_="form-control", placeholder=_("Budget indicativo")) }}
+    </div>
+    <div class="mb-3">
+      {{ form.message.label }}
+      {{ form.message(class_="form-control", placeholder=_("Note o richieste particolari"), rows=4) }}
+    </div>
+
+    <div class="text-center">
+      {{ form.submit(class_="btn btn-primary") }}
+    </div>
+  </form>
+</div>
+{% endblock %}
+
+{% block extra_styles %}
+<script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
+<script>
+  grecaptcha.ready(function () {
+    grecaptcha.execute('{{ recaptcha_site_key }}', { action: 'submit' }).then(function (token) {
+      document.getElementById('recaptchaToken').value = token;
+    });
+  });
+</script>
+{% endblock %}

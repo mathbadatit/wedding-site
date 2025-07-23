@@ -1,0 +1,24 @@
+<h3>👤 Gestione Utenti</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Ruolo</th>
+      <th>Azioni</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+    <tr>
+      <td>{{ user.username }}</td>
+      <td>{{ user.role }}</td>
+      <td>
+        <a href="{{ url_for('main.user_edit', user_id=user.id) }}" class="btn btn-sm btn-warning">✏️ Modifica</a>
+        <form action="{{ url_for('main.user_delete', user_id=user.id) }}" method="post" style="display:inline;">
+          <button type="submit" class="btn btn-sm btn-danger">🗑️ Elimina</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

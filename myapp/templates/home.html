@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Home') }}{% endblock %}
+{% block meta_description %}{{ _('Benvenuti nel nostro mondo di matrimoni su misura in Italia') }}{% endblock %}
+
+{% block content %}
+<section class="hero-section fade-in">
+  <h1>{{ _('Benvenuti nel nostro mondo di matrimoni da sogno') }}</h1>
+  <p>{{ _('Organizziamo ogni dettaglio con amore e passione') }}</p>
+</section>
+
+{% if services %}
+<section class="services-section fade-in">
+  <h2 class="section-title">{{ _('I nostri Servizi') }}</h2>
+  <div class="services-list">
+    {% for service in services %}
+      <div class="service-item">
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if images %}
+<section class="gallery-preview fade-in">
+  <h2 class="section-title">{{ _('Galleria') }}</h2>
+  <div class="gallery-images">
+    {% for image in images %}
+      <img src="{{ url_for('uploaded_file', filename=image.filename) }}"
+           alt="{{ image.alt_text or _('Immagine Galleria') }}"
+           loading="lazy">
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if collaborators %}
+<section class="services-section fade-in">
+  <h2 class="section-title">{{ _('I nostri Collaboratori') }}</h2>
+  <div class="services-list">
+    {% for c in collaborators %}
+      <div class="service-item">
+        {% if c.image_filename %}
+          <img src="{{ url_for('uploaded_file', filename=c.image_filename) }}" 
+               alt="{{ c.name }}" 
+               loading="lazy"
+               style="width:100%; max-height:150px; object-fit:cover; border-radius:8px;">
+        {% endif %}
+        <h3>{{ c.name }}</h3>
+        <p><strong>{{ c.category }}</strong></p>
+        <p>{{ c.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endblock %}

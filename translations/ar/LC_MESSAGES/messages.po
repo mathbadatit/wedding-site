@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-23 22:54+0200\n"
-"PO-Revision-Date: 2025-06-23 22:05+0200\n"
+"POT-Creation-Date: 2025-07-22 09:34+0200\n"
+"PO-Revision-Date: 2025-07-22 18:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ar\n"
 "Language-Team: ar <LL@li.org>\n"
@@ -18,4 +18,543 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
+
+#: myapp/contact.py:16
+msgid "Verifica reCAPTCHA fallita. Riprova."
+msgstr ""
+
+#: myapp/contact.py:35
+msgid "Grazie per averci contattato! Ti risponderemo al più presto."
+msgstr ""
+
+#: myapp/contact.py:37
+msgid "Errore nell'invio della mail, ma messaggio salvato."
+msgstr ""
+
+#: myapp/email_utils.py:18 myapp/email_utils.py:42
+#: myapp/templates/thankyou.html:8
+msgid "Grazie per averci contattato!"
+msgstr ""
+
+#: myapp/email_utils.py:19 myapp/email_utils.py:43
+msgid "Ti risponderemo al più presto."
+msgstr ""
+
+#: myapp/forms/ContactForm.py:7 myapp/forms/booking_forms.py:7
+#: myapp/templates/admin/contacts.html:14 myapp/templates/admin/login.html:20
+#: myapp/templates/admin/messages/messages_list.html:12
+msgid "Nome"
+msgstr ""
+
+#: myapp/forms/ContactForm.py:8 myapp/forms/auth_forms.py:12
+#: myapp/forms/booking_forms.py:8 myapp/templates/admin/contacts.html:15
+#: myapp/templates/admin/messages/messages_list.html:13
+msgid "Email"
+msgstr ""
+
+#: myapp/forms/ContactForm.py:9 myapp/forms/booking_forms.py:9
+#: myapp/templates/admin/contacts.html:16
+msgid "Telefono"
+msgstr ""
+
+#: myapp/forms/ContactForm.py:10 myapp/templates/admin/contacts.html:17
+#: myapp/templates/admin/contacts.html:54
+#: myapp/templates/admin/messages/messages_list.html:14
+#: myapp/templates/admin/messages/messages_list.html:36
+msgid "Oggetto"
+msgstr ""
+
+#: myapp/forms/ContactForm.py:11 myapp/forms/booking_forms.py:12
+#: myapp/templates/admin/contacts.html:19
+#: myapp/templates/admin/contacts.html:58
+#: myapp/templates/admin/messages/messages_list.html:40
+msgid "Messaggio"
+msgstr ""
+
+#: myapp/forms/ContactForm.py:12 myapp/forms/booking_forms.py:13
+msgid "Token"
+msgstr ""
+
+#: myapp/forms/ContactForm.py:13
+msgid "Invia"
+msgstr ""
+
+#: myapp/forms/auth_forms.py:7 myapp/forms/auth_forms.py:13
+msgid "Username"
+msgstr ""
+
+#: myapp/forms/auth_forms.py:8 myapp/forms/auth_forms.py:14
+msgid "Password"
+msgstr ""
+
+#: myapp/forms/auth_forms.py:9 myapp/templates/base.html:67
+msgid "Login"
+msgstr ""
+
+#: myapp/forms/auth_forms.py:15
+msgid "Registrati"
+msgstr ""
+
+#: myapp/forms/booking_forms.py:10
+msgid "Location"
+msgstr ""
+
+#: myapp/forms/booking_forms.py:11
+msgid "Budget"
+msgstr ""
+
+#: myapp/forms/booking_forms.py:14 myapp/templates/base.html:54
+msgid "Prenota"
+msgstr ""
+
+#: myapp/templates/about.html:3 myapp/templates/about.html:8
+#: myapp/templates/base.html:68
+msgid "Chi siamo"
+msgstr ""
+
+#: myapp/templates/about.html:4
+msgid ""
+"Scopri chi siamo: un team esperto di wedding planner per matrimoni "
+"indimenticabili in Italia."
+msgstr ""
+
+#: myapp/templates/about.html:11
+msgid ""
+"Siamo un team di wedding planner appassionati, con anni di esperienza "
+"nell’organizzazione di matrimoni da sogno in Italia."
+msgstr ""
+
+#: myapp/templates/about.html:12
+msgid ""
+"Crediamo che ogni coppia meriti un matrimonio indimenticabile, curato nei"
+" minimi dettagli."
+msgstr ""
+
+#: myapp/templates/about.html:13
+msgid ""
+"Dalle location più esclusive ai fornitori migliori, ci occupiamo di tutto"
+" per rendere il tuo giorno davvero speciale."
+msgstr ""
+
+#: myapp/templates/base.html:6
+msgid "Wedding Planner Italia"
+msgstr ""
+
+#: myapp/templates/base.html:7
+msgid "Organizzazione matrimoni in Italia: location, servizi, consigli."
+msgstr ""
+
+#: myapp/templates/base.html:51 myapp/templates/home.html:2
+msgid "Home"
+msgstr ""
+
+#: myapp/templates/admin/login.html:13
+#: myapp/templates/admin/partials/admin_cards.html:3
+#: myapp/templates/admin/partials/tab_services.html:2
+#: myapp/templates/base.html:52 myapp/templates/services.html:2
+msgid "Servizi"
+msgstr ""
+
+#: myapp/templates/base.html:53 myapp/templates/contact.html:3
+msgid "Contatti"
+msgstr ""
+
+#: myapp/templates/admin/messages/messages_list.html:2
+#: myapp/templates/base.html:59
+msgid "Messaggi"
+msgstr ""
+
+#: myapp/templates/base.html:65
+msgid "Logout"
+msgstr ""
+
+#: myapp/templates/base.html:102
+msgid "Tutti i diritti riservati"
+msgstr ""
+
+#: myapp/templates/booking.html:2 myapp/templates/booking.html:7
+msgid "Prenota il tuo matrimonio"
+msgstr ""
+
+#: myapp/templates/booking.html:3
+msgid ""
+"Prenota ora il tuo matrimonio in Italia: invia i tuoi dettagli, scegli la"
+" location e ricevi un preventivo personalizzato."
+msgstr ""
+
+#: myapp/templates/booking.html:22
+msgid "Il tuo nome completo"
+msgstr ""
+
+#: myapp/templates/booking.html:26
+msgid "Indirizzo email"
+msgstr ""
+
+#: myapp/templates/booking.html:30
+msgid "Numero di telefono"
+msgstr ""
+
+#: myapp/templates/booking.html:34
+msgid "Luogo desiderato per il matrimonio"
+msgstr ""
+
+#: myapp/templates/booking.html:38
+msgid "Budget indicativo"
+msgstr ""
+
+#: myapp/templates/booking.html:42
+msgid "Note o richieste particolari"
+msgstr ""
+
+#: myapp/templates/collaborator_form.html:3
+#: myapp/templates/collaborator_form.html:7
+msgid "Modifica Collaboratore"
+msgstr ""
+
+#: myapp/templates/collaborator_form.html:3
+msgid "Aggiungi Collaboratore"
+msgstr ""
+
+#: myapp/templates/collaborator_form.html:7
+msgid "Aggiungi Nuovo Collaboratore"
+msgstr ""
+
+#: myapp/templates/collaborator_form.html:41
+msgid "Immagine attuale:"
+msgstr ""
+
+#: myapp/templates/admin/users/user_form.html:40
+#: myapp/templates/collaborator_form.html:50
+#: myapp/templates/edit_gallery.html:30 myapp/templates/gallery_upload.html:20
+msgid "Annulla"
+msgstr ""
+
+#: myapp/templates/contact.html:4
+msgid ""
+"Contatta i nostri wedding planner in Italia. Risposte rapide, servizi su "
+"misura."
+msgstr ""
+
+#: myapp/templates/contact.html:8
+msgid "Contattaci"
+msgstr ""
+
+#: myapp/templates/contact.html:16
+msgid "Inserisci il tuo nome"
+msgstr ""
+
+#: myapp/templates/contact.html:21
+msgid "Inserisci la tua email"
+msgstr ""
+
+#: myapp/templates/contact.html:26
+msgid "Inserisci il tuo numero di telefono"
+msgstr ""
+
+#: myapp/templates/contact.html:31
+msgid "Oggetto del messaggio"
+msgstr ""
+
+#: myapp/templates/contact.html:41
+msgid "Scrivi il tuo messaggio"
+msgstr ""
+
+#: myapp/templates/contact.html:55
+msgid "Dove siamo"
+msgstr ""
+
+#: myapp/templates/cookie.html:2 myapp/templates/cookie.html:6
+msgid "Cookie Policy"
+msgstr ""
+
+#: myapp/templates/cookie.html:7
+msgid "Questo sito usa cookie tecnici e di terze parti."
+msgstr ""
+
+#: myapp/templates/edit_gallery.html:3
+msgid "Modifica Immagine Galleria"
+msgstr ""
+
+#: myapp/templates/edit_gallery.html:6
+msgid "Modifica Immagine"
+msgstr ""
+
+#: myapp/templates/gallery.html:3 myapp/templates/gallery_upload.html:3
+msgid "Carica Immagine Galleria"
+msgstr ""
+
+#: myapp/templates/gallery.html:6
+msgid "Carica Nuova Immagine"
+msgstr ""
+
+#: myapp/templates/gallery_upload.html:7
+msgid "Carica nuova immagine"
+msgstr ""
+
+#: myapp/templates/gallery_upload.html:19 myapp/templates/upload.html:14
+#: myapp/templates/upload_image.html:16
+msgid "Carica"
+msgstr ""
+
+#: myapp/templates/home.html:3
+msgid "Benvenuti nel nostro mondo di matrimoni su misura in Italia"
+msgstr ""
+
+#: myapp/templates/home.html:7
+msgid "Benvenuti nel nostro mondo di matrimoni da sogno"
+msgstr ""
+
+#: myapp/templates/home.html:8
+msgid "Organizziamo ogni dettaglio con amore e passione"
+msgstr ""
+
+#: myapp/templates/home.html:13 myapp/templates/services.html:12
+msgid "I nostri Servizi"
+msgstr ""
+
+#: myapp/templates/admin/partials/admin_cards.html:15
+#: myapp/templates/home.html:27
+msgid "Galleria"
+msgstr ""
+
+#: myapp/templates/home.html:31
+msgid "Immagine Galleria"
+msgstr ""
+
+#: myapp/templates/home.html:40
+msgid "I nostri Collaboratori"
+msgstr ""
+
+#: myapp/templates/privacy.html:2 myapp/templates/privacy.html:6
+msgid "Privacy Policy"
+msgstr ""
+
+#: myapp/templates/privacy.html:7
+msgid "Questa è la nostra informativa sulla privacy secondo il GDPR."
+msgstr ""
+
+#: myapp/templates/service_form.html:3 myapp/templates/service_form.html:7
+msgid "Modifica Servizio"
+msgstr ""
+
+#: myapp/templates/service_form.html:3
+msgid "Crea Servizio"
+msgstr ""
+
+#: myapp/templates/service_form.html:7
+msgid "Crea Nuovo Servizio"
+msgstr ""
+
+#: myapp/templates/services.html:3
+msgid ""
+"Scopri tutti i servizi per il tuo matrimonio da sogno: location, "
+"catering, allestimenti e molto altro."
+msgstr ""
+
+#: myapp/templates/services.html:7
+msgid "Scopri i nostri servizi esclusivi"
+msgstr ""
+
+#: myapp/templates/services.html:8
+msgid "Dalla pianificazione all’allestimento, ogni dettaglio è curato con stile."
+msgstr ""
+
+#: myapp/templates/services.html:20
+msgid "Nessun servizio disponibile al momento."
+msgstr ""
+
+#: myapp/templates/thankyou.html:2
+msgid "Grazie"
+msgstr ""
+
+#: myapp/templates/thankyou.html:3
+msgid ""
+"Grazie per averci contattato. Ti risponderemo al più presto con una "
+"proposta personalizzata."
+msgstr ""
+
+#: myapp/templates/thankyou.html:9
+msgid "Ti risponderemo il prima possibile."
+msgstr ""
+
+#: myapp/templates/upload.html:2
+msgid "Carica immagine"
+msgstr ""
+
+#: myapp/templates/upload.html:5 myapp/templates/upload_image.html:6
+msgid "Carica una nuova immagine"
+msgstr ""
+
+#: myapp/templates/upload.html:8
+msgid "Seleziona immagine"
+msgstr ""
+
+#: myapp/templates/upload.html:11
+msgid "Descrizione (opzionale)"
+msgstr ""
+
+#: myapp/templates/admin/partials/admin_cards.html:21
+#: myapp/templates/upload_image.html:2
+msgid "Carica Immagine"
+msgstr ""
+
+#: myapp/templates/upload_image.html:9
+msgid "Scegli file immagine"
+msgstr ""
+
+#: myapp/templates/upload_image.html:13
+msgid "Didascalia (facoltativa)"
+msgstr ""
+
+#: myapp/templates/upload_image.html:17
+msgid "Torna alla Dashboard"
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:2
+msgid "Messaggi di Contatto"
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:6
+msgid "Messaggi di contatto"
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:7
+msgid "Messaggi non letti"
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:9
+#: myapp/templates/admin/messages/messages_list.html:7
+msgid "Cerca..."
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:18
+msgid "Motivo"
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:20
+#: myapp/templates/admin/messages/messages_list.html:15
+msgid "Data"
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:21
+msgid "Stato"
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:39
+msgid "Letto"
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:39
+msgid "Non letto"
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:48
+#: myapp/templates/admin/messages/messages_list.html:30
+msgid "Esporta in Excel"
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:50
+#: myapp/templates/admin/messages/messages_list.html:32
+msgid "Rispondi al messaggio"
+msgstr ""
+
+#: myapp/templates/admin/contacts.html:61
+#: myapp/templates/admin/messages/messages_list.html:43
+msgid "Invia Email"
+msgstr ""
+
+#: myapp/templates/admin/login.html:4
+msgid ""
+"Accedi alla dashboard per gestire i servizi matrimoniali e le "
+"prenotazioni."
+msgstr ""
+
+#: myapp/templates/admin/login.html:8
+msgid "Dashboard"
+msgstr ""
+
+#: myapp/templates/admin/login.html:9
+msgid "Benvenuto,"
+msgstr ""
+
+#: myapp/templates/admin/login.html:14
+#: myapp/templates/admin/partials/admin_cards.html:11
+#: myapp/templates/admin/partials/tab_services.html:4
+msgid "Aggiungi Servizio"
+msgstr ""
+
+#: myapp/templates/admin/login.html:19
+msgid "ID"
+msgstr ""
+
+#: myapp/templates/admin/login.html:21
+msgid "Descrizione"
+msgstr ""
+
+#: myapp/templates/admin/login.html:22
+msgid "Azioni"
+msgstr ""
+
+#: myapp/templates/admin/login.html:32
+#: myapp/templates/admin/partials/admin_cards.html:6
+msgid "Modifica"
+msgstr ""
+
+#: myapp/templates/admin/login.html:34
+msgid "Elimina"
+msgstr ""
+
+#: myapp/templates/admin/login.html:40
+#: myapp/templates/admin/partials/tab_services.html:9
+msgid "Nessun servizio presente."
+msgstr ""
+
+#: myapp/templates/admin/login.html:49
+msgid "Sei sicuro di voler eliminare questo servizio?"
+msgstr ""
+
+#: myapp/templates/admin/messages/messages_list.html:5
+msgid "Messaggi ricevuti"
+msgstr ""
+
+#: myapp/templates/admin/partials/admin_cards.html:8
+msgid "Nessun servizio"
+msgstr ""
+
+#: myapp/templates/admin/partials/admin_cards.html:19
+msgid "Nessuna immagine"
+msgstr ""
+
+#: myapp/templates/admin/partials/admin_cards.html:25
+msgid "Prenotazioni"
+msgstr ""
+
+#: myapp/templates/admin/partials/admin_cards.html:30
+msgid "Nessuna prenotazione"
+msgstr ""
+
+#: myapp/templates/admin/partials/tab_services.html:3
+msgid "Esporta Servizi (CSV)"
+msgstr ""
+
+#: myapp/templates/admin/users/user_form.html:3
+#: myapp/templates/admin/users/user_form.html:7
+msgid "Modifica Utente"
+msgstr ""
+
+#: myapp/templates/admin/users/user_form.html:3
+msgid "Aggiungi Utente"
+msgstr ""
+
+#: myapp/templates/admin/users/user_form.html:7
+msgid "Crea Nuovo Utente"
+msgstr ""
+
+#: myapp/templates/admin/users/user_form.html:24
+msgid "Lascia vuoto per mantenere la password corrente"
+msgstr ""
+
+#: myapp/utils/admin_utils.py:12
+msgid "Accesso non autorizzato"
+msgstr ""
 
