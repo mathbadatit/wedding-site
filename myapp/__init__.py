@@ -1,5 +1,5 @@
 import os
-from flask import Flask, session, request, send_from_directory
+from flask import Flask, session, request, redirect, url_for, send_from_directory, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_babel import Babel
 from flask_mail import Mail
@@ -7,9 +7,8 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect
 from flask_jwt_extended import JWTManager
-from dotenv import load_dotenv
-
-from .utils.error_handler_utils import register_error_handlers  # Gestore Errori
+import logging
+import traceback
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -21,25 +20,15 @@ jwt = JWTManager()
 
 login_manager.login_view = 'admin.login'
 
-load_dotenv()
-
 def get_locale():
     lang = session.get('lang')
     if lang in ['it', 'en', 'ar']:
         return lang
     return request.accept_languages.best_match(['it', 'en', 'ar']) or 'it'
 
-from myapp.models import (
-    AdminUser,
-    Service,
-    GalleryImage,
-    Collaborator
-)
-
 def create_app():
     app = Flask(__name__)
 
-    # Config dinamica ambiente
     env = os.environ.get('FLASK_ENV', 'development')
     if env == 'production':
         from config import ProductionConfig
@@ -50,7 +39,6 @@ def create_app():
 
     os.makedirs(app.config.get('UPLOAD_FOLDER', 'uploads'), exist_ok=True)
 
-    # Inizializzazione estensioni
     db.init_app(app)
     migrate.init_app(app, db)
     mail.init_app(app)
@@ -59,16 +47,12 @@ def create_app():
     login_manager.init_app(app)
     jwt.init_app(app)
 
- # ✅ Registrazione comandi CLI
-    from .commands import register_commands
-    register_commands(app)
-
-    # Registrazione Blueprint
-    from .main import bp as main_bp
-    from .admin import bp as admin_bp
-    from .booking import booking_bp
-    from .contact import contact_bp
-    from .api import api_bp
+    # Importa blueprint con nomi coerenti
+    from myapp.main import bp as main_bp
+    from myapp.admin import bp as admin_bp
+    from myapp.booking import booking_bp
+    from myapp.contact import contact_bp
+    from myapp.api import api_bp
 
     app.register_blueprint(main_bp)
     app.register_blueprint(admin_bp, url_prefix='/admin')
@@ -76,7 +60,7 @@ def create_app():
     app.register_blueprint(contact_bp)
     app.register_blueprint(api_bp, url_prefix='/api')
 
-    # User Loader
+    # User loader flask-login
     from myapp.models.user import User
 
     @login_manager.user_loader
@@ -100,8 +84,16 @@ def create_app():
     def set_language(lang_code):
         if lang_code in ['it', 'en', 'ar']:
             session['lang'] = lang_code
-        return request.referrer or '/'
+        return redirect(request.referrer or url_for('main.home'))
 
+    @app.errorhandler(500)
+    def internal_error(error):
+     logging.error(f"Errore 500: {error}")
+     traceback.print_exc()  # stampa lo stacktrace nel terminale
+     return render_template('500.html'), 500
+
+    # Importa e registra gli error handlers
+    from myapp.utils.error_handler_utils import register_error_handlers
     register_error_handlers(app)
 
     return app
