@@ -1,17 +1,13 @@
 @echo off
-echo 🚀 Build e avvio del progetto con Docker Compose
+REM Attiva l'ambiente virtuale
+call .venv\Scripts\activate.bat
 
-docker-compose build
-if ERRORLEVEL 1 (
-    echo ❌ Errore nella build
-    exit /b 1
-)
+REM (Opzionale) Installa dipendenze
+pip install -r requirements.txt
 
-docker-compose up -d
-if ERRORLEVEL 1 (
-    echo ❌ Errore nell'avvio dei container
-    exit /b 1
-)
+REM Avvia Flask in debug mode
+set FLASK_APP=manage.py
+set FLASK_ENV=development
+flask run
 
-echo ✅ Tutto avviato correttamente!
 pause
