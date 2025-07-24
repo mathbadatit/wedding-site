@@ -14,7 +14,7 @@
   <div class="services-list">
     {% for service in services %}
       <div class="service-item">
-        <h3>{{ service.name }}</h3>
+        <h3>{{ service.title }}</h3>
         <p>{{ service.description }}</p>
       </div>
     {% endfor %}
@@ -42,8 +42,8 @@
     {% for c in collaborators %}
       <div class="service-item">
         {% if c.image_filename %}
-          <img src="{{ url_for('uploaded_file', filename=c.image_filename) }}" 
-               alt="{{ c.name }}" 
+          <img src="{{ url_for('uploaded_file', filename=c.image_filename) }}"
+               alt="{{ c.name }}"
                loading="lazy"
                style="width:100%; max-height:150px; object-fit:cover; border-radius:8px;">
         {% endif %}

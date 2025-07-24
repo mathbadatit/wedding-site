@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <title>Pagina non trovata - 404</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f8f8f8; color: #333; text-align: center; padding: 100px; }
+        h1 { font-size: 3em; margin-bottom: 0; }
+        p { font-size: 1.2em; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>404</h1>
+    <p>Ops, la pagina che stai cercando non è stata trovata.</p>
+    <p><a href="{{ url_for('main.home') }}">Torna alla home</a></p>
+</body>
+</html>
