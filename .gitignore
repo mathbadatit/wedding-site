@@ -12,5 +12,5 @@ instance/
 
 migrations/__pycache__/
 
-# Traduzioni generate (solo i .mo non i .po)
+# Ignora solo i file di traduzione compilati (mo)
 translations/*/LC_MESSAGES/*.mo
