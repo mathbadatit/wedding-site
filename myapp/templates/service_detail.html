@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ service.title }} - Wedding Planner{% endblock %}
+{% block meta_description %}{{ service.description[:150] }}{% endblock %}
+{% block meta_image %}{{ url_for('static', filename='uploads/' ~ service.image_filename) }}{% endblock %}
+
+{% block content %}
+<article class="service-detail container py-5">
+  <h1>{{ service.title }}</h1>
+  <img src="{{ url_for('static', filename='uploads/' ~ service.image_filename) }}" class="img-fluid mb-4" alt="{{ service.title }}">
+  <p class="text-muted">{{ service.category }}</p>
+  <div class="lead">{{ service.description }}</div>
+  <a href="{{ url_for('services.list') }}" class="btn btn-secondary mt-4">← Torna ai Servizi</a>
+</article>
+{% endblock %}

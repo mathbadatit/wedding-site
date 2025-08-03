@@ -1,9 +1,8 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash
 from myapp.extensions import db
 from myapp.models import Booking, Service
 from myapp.forms.booking_forms import BookingForm
-
-booking_bp = Blueprint('booking', __name__)
+from . import booking_bp
 
 @booking_bp.route('/book', methods=['GET', 'POST'])
 def book():

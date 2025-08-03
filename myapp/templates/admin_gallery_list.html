@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="admin-layout">
+  <h2>Galleria Immagini</h2>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flashes">
+        {% for category, message in messages %}
+          <li class="flash-{{ category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <a href="{{ url_for('admin.upload_gallery_image') }}" class="btn">➕ Carica nuova immagine</a>
+
+  <div class="gallery-grid">
+    {% for image in images %}
+      <div class="gallery-item">
+        <img src="{{ url_for('static', filename='uploads/' ~ image.filename) }}"
+             alt="{{ image.alt_text }}" class="thumbnail">
+        <p>{{ image.alt_text }}</p>
+        <form action="{{ url_for('admin.admin_gallery_delete', image_id=image.id) }}"
+              method="post" onsubmit="return confirm('Sicuro di voler eliminare questa immagine?');">
+          <button type="submit" class="btn btn-danger">🗑️ Elimina</button>
+        </form>
+      </div>
+    {% else %}
+      <p>Nessuna immagine presente nella galleria.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

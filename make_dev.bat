@@ -1,23 +1,21 @@
 @echo off
-echo === Attivo ambiente virtuale ===
-call .venv\Scripts\activate
+echo 🔄 Resetting database...
 
-echo === Eseguo migrazioni e upgrade ===
-flask db migrate -m "Auto migration"
+REM [OPZIONALE] Cancella il vecchio DB
+IF EXIST "instance\app.db" (
+    del "instance\app.db"
+    echo ✅ Vecchio database rimosso.
+)
+
+REM Migra il database
+echo 🗂️ Migrating DB...
 flask db upgrade
 
-echo === Creo l'admin ===
-python init_admin.py
+REM Seed: categorie e servizi
+echo 🌱 Seeding dati demo...
+python seed.py
 
-echo === Inserisco dati demo ===
-flask seed-demo
-
-echo === Aggiorno traduzioni ===
-pybabel extract -F babel.cfg -o translations/messages.pot .
-pybabel update -i translations/messages.pot -d translations
-pybabel compile -d translations
-
-echo === Avvio server Flask in locale ===
-flask run
-
-pause
+REM Avvia server con auto-reload
+echo 🚀 Avvio Flask...
+start "" http://127.0.0.1:5000/
+flask run --reload

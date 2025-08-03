@@ -1,24 +1,28 @@
 import os
-from flask import Flask, session, request, redirect, url_for, send_from_directory, render_template
-from flask_sqlalchemy import SQLAlchemy
-from flask_babel import Babel
-from flask_mail import Mail
-from flask_login import LoginManager
-from flask_migrate import Migrate
-from flask_wtf.csrf import CSRFProtect
-from flask_jwt_extended import JWTManager
 import logging
 import traceback
+from flask import Flask, session, request, redirect, url_for, send_from_directory, render_template
+from myapp.extensions import db, migrate, mail, babel, csrf, login_manager, jwt
+from myapp.auth.routes import bp as auth_bp
+from myapp.utils.template_helpers import login_url
+from flask import Blueprint, render_template
+from myapp.models import Service
 
-db = SQLAlchemy()
-migrate = Migrate()
-mail = Mail()
-babel = Babel()
-csrf = CSRFProtect()
-login_manager = LoginManager()
-jwt = JWTManager()
+services_bp = Blueprint('services', __name__, url_prefix='/services')
 
-login_manager.login_view = 'admin.login'
+@services_bp.route('/')
+def list():
+    services = Service.query.all()
+    categories = sorted(set([s.category for s in services if s.category]))
+    return render_template('services.html', services=services, categories=categories)
+
+@services_bp.route('/modal/<int:service_id>')
+def modal(service_id):
+    service = Service.query.get_or_404(service_id)
+    return render_template('partials/service_modal.html', service=service)
+
+
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 def get_locale():
     lang = session.get('lang')
@@ -37,8 +41,11 @@ def create_app():
         from config import DevelopmentConfig
         app.config.from_object(DevelopmentConfig)
 
-    os.makedirs(app.config.get('UPLOAD_FOLDER', 'uploads'), exist_ok=True)
+    # Cartella upload
+    app.config['UPLOAD_FOLDER'] = os.path.join(basedir, 'static', 'uploads')
+    os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
+    # Inizializza estensioni
     db.init_app(app)
     migrate.init_app(app, db)
     mail.init_app(app)
@@ -47,7 +54,7 @@ def create_app():
     login_manager.init_app(app)
     jwt.init_app(app)
 
-    # Importa blueprint con nomi coerenti
+    # Blueprint
     from myapp.main import bp as main_bp
     from myapp.admin import bp as admin_bp
     from myapp.booking import booking_bp
@@ -59,14 +66,17 @@ def create_app():
     app.register_blueprint(booking_bp)
     app.register_blueprint(contact_bp)
     app.register_blueprint(api_bp, url_prefix='/api')
-
-    # User loader flask-login
+    app.register_blueprint(auth_bp, url_prefix="/auth")
+    app.register_blueprint(services_bp)
+    
+    # User loader per login_manager
     from myapp.models.user import User
-
     @login_manager.user_loader
     def load_user(user_id):
-        return User.query.get(int(user_id))
+        return User.query.get(int(user_id)) if user_id else None
 
+
+    # Context processors
     @app.context_processor
     def inject_get_locale():
         return dict(get_locale=get_locale)
@@ -75,24 +85,32 @@ def create_app():
     def inject_current_year():
         from datetime import datetime
         return {'current_year': datetime.now().year}
+    
+    @app.context_processor
+    def inject_template_helpers():
+       return dict(login_url=login_url)
 
+
+    # Route per upload statico (immagini)
     @app.route('/uploads/<filename>')
     def uploaded_file(filename):
         return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
+    # Route cambio lingua
     @app.route('/set_language/<lang_code>')
     def set_language(lang_code):
         if lang_code in ['it', 'en', 'ar']:
             session['lang'] = lang_code
         return redirect(request.referrer or url_for('main.home'))
 
+    # Gestione errore 500
     @app.errorhandler(500)
     def internal_error(error):
-     logging.error(f"Errore 500: {error}")
-     traceback.print_exc()  # stampa lo stacktrace nel terminale
-     return render_template('500.html'), 500
+        logging.error(f"Errore 500: {error}")
+        traceback.print_exc()
+        return render_template('500.html'), 500
 
-    # Importa e registra gli error handlers
+    # Error handlers personalizzati
     from myapp.utils.error_handler_utils import register_error_handlers
     register_error_handlers(app)
 

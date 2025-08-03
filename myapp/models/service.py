@@ -1,9 +1,13 @@
-from myapp.extensions import db
+from myapp import db
+
 class Service(db.Model):
+    __tablename__ = 'services'
+
     id = db.Column(db.Integer, primary_key=True)
-    title_it = db.Column(db.String(200), nullable=False)  # Italiano obbligatorio
-    title_en = db.Column(db.String(200), nullable=True)   # Inglese opzionale
-    title_ar = db.Column(db.String(200), nullable=True)   # Arabo opzionale
-    description_it = db.Column(db.Text, nullable=False)
-    description_en = db.Column(db.Text, nullable=False)
-    description_ar = db.Column(db.Text, nullable=False)
+    title = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.Text, nullable=False)
+    category = db.Column(db.String(50))
+    image_filename = db.Column(db.String(200))
+
+    def __repr__(self):
+        return f'<Service {self.title}>'

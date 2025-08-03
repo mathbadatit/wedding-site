@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="admin-layout">
+  <h2>Carica Nuova Immagine</h2>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flashes">
+        {% for category, message in messages %}
+          <li class="flash-{{ category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="image">Seleziona immagine:</label>
+      <input type="file" name="image" id="image" accept="image/*" required>
+    </div>
+    <div class="form-group">
+      <label for="alt_text">Descrizione (testo alternativo):</label>
+      <input type="text" name="alt_text" id="alt_text" placeholder="Descrizione dell'immagine">
+    </div>
+    <button type="submit" class="btn">Carica</button>
+  </form>
+
+  <p><a href="{{ url_for('admin.admin_gallery_list') }}">&larr; Torna alla galleria</a></p>
+</div>
+{% endblock %}

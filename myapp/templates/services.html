@@ -1,24 +1,70 @@
 {% extends "base.html" %}
-{% block title %}{{ _('Servizi') }}{% endblock %}
+
+{% block title %}{{ _('Servizi') }} - Wedding Planner{% endblock %}
 {% block meta_description %}{{ _('Scopri tutti i servizi per il tuo matrimonio da sogno: location, catering, allestimenti e molto altro.') }}{% endblock %}
+{% block meta_image %}{{ url_for('static', filename='images/services-hero.jpg') }}{% endblock %}
 
 {% block content %}
-<section class="hero-section fade-in">
-  <h1>{{ _('Scopri i nostri servizi esclusivi') }}</h1>
-  <p>{{ _('Dalla pianificazione all’allestimento, ogni dettaglio è curato con stile.') }}</p>
-</section>
 
-<section class="services-section fade-in">
-  <h2 class="section-title">{{ _('I nostri Servizi') }}</h2>
-  <div class="services-list">
-    {% for s in services %}
-      <div class="service-item">
-        <h3>{{ s.title }}</h3>
-        <p>{{ s.description }}</p>
-      </div>
-    {% else %}
-      <p>{{ _('Nessun servizio disponibile al momento.') }}</p>
-    {% endfor %}
+<!-- HERO -->
+<section class="hero-section fade-in aos-init" data-aos="fade-up">
+  <div class="container">
+    <h1>{{ _('Scopri i nostri servizi esclusivi') }}</h1>
+    <p>{{ _('Dalla pianificazione all’allestimento, ogni dettaglio è curato con stile.') }}</p>
   </div>
 </section>
+
+<!-- FILTRI -->
+<section class="filter-section aos-init" data-aos="fade-up" data-aos-delay="100">
+  <div class="container">
+    <div class="filter-buttons">
+      <button class="filter-btn" data-category="all">{{ _('Tutti') }}</button>
+      {% for cat in categories %}
+        <button class="filter-btn" data-category="{{ cat|lower }}">{{ _(cat) }}</button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section class="services-section aos-init" data-aos="fade-up" data-aos-delay="200">
+  <div class="container">
+    <div class="services-list row">
+      {% for s in services %}
+        <div class="col-md-4 mb-4 service-item service-card" data-category="{{ s.category|lower }}" data-id="{{ s.id }}" tabindex="0">
+          <div class="card h-100">
+            {% if s.image_filename %}
+              <a href="{{ url_for('services.detail', service_id=s.id) }}" class="service-link">
+                <img src="{{ url_for('static', filename='uploads/' ~ s.image_filename) }}" class="card-img-top" alt="{{ s.title }}">
+              </a>
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{ s.title }}</h5>
+              <p class="card-text">{{ s.description[:100] }}...</p>
+              <button class="btn btn-outline-primary open-modal" data-id="{{ s.id }}">{{ _('Scopri di più') }}</button>
+            </div>
+          </div>
+        </div>
+      {% else %}
+        <p>{{ _('Nessun servizio disponibile al momento.') }}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- MODALE AJAX FALLBACK -->
+<div id="modal-container">
+  <div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body" id="modal-content"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/services.js') }}"></script>
 {% endblock %}

@@ -406,3 +406,46 @@ body.dark-mode form {
     flex-direction: column;
   }
 }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* 🎨 Galleria Immagini Admin */
+/* ============================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.thumbnail {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.service-item {
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.service-item:hover,
+.service-item:focus {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  outline: none;
+}
