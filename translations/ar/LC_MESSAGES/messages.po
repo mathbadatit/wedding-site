@@ -12,8 +12,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ar\n"
 "Language-Team: ar <LL@li.org>\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
-"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,540 +20,540 @@ msgstr ""
 
 #: myapp/contact.py:16
 msgid "Verifica reCAPTCHA fallita. Riprova."
-msgstr ""
+msgstr "فشل التحقق من reCAPTCHA. الرجاء المحاولة مرة أخرى."
 
 #: myapp/contact.py:35
 msgid "Grazie per averci contattato! Ti risponderemo al più presto."
-msgstr ""
+msgstr "شكرًا لتواصلك معنا! سنرد عليك في أقرب وقت ممكن."
 
 #: myapp/contact.py:37
 msgid "Errore nell'invio della mail, ma messaggio salvato."
-msgstr ""
+msgstr "حدث خطأ أثناء إرسال البريد الإلكتروني، ولكن تم حفظ الرسالة."
 
 #: myapp/email_utils.py:18 myapp/email_utils.py:42
 #: myapp/templates/thankyou.html:8
 msgid "Grazie per averci contattato!"
-msgstr ""
+msgstr "شكرًا لتواصلك معنا!"
 
 #: myapp/email_utils.py:19 myapp/email_utils.py:43
 msgid "Ti risponderemo al più presto."
-msgstr ""
+msgstr "سنرد عليك في أقرب وقت ممكن."
 
 #: myapp/forms/ContactForm.py:7 myapp/forms/booking_forms.py:7
 #: myapp/templates/admin/contacts.html:14 myapp/templates/admin/login.html:20
 #: myapp/templates/admin/messages/messages_list.html:12
 msgid "Nome"
-msgstr ""
+msgstr "الاسم"
 
 #: myapp/forms/ContactForm.py:8 myapp/forms/auth_forms.py:12
 #: myapp/forms/booking_forms.py:8 myapp/templates/admin/contacts.html:15
 #: myapp/templates/admin/messages/messages_list.html:13
 msgid "Email"
-msgstr ""
+msgstr "البريد الإلكتروني"
 
 #: myapp/forms/ContactForm.py:9 myapp/forms/booking_forms.py:9
 #: myapp/templates/admin/contacts.html:16
 msgid "Telefono"
-msgstr ""
+msgstr "رقم الهاتف"
 
 #: myapp/forms/ContactForm.py:10 myapp/templates/admin/contacts.html:17
 #: myapp/templates/admin/contacts.html:54
 #: myapp/templates/admin/messages/messages_list.html:14
 #: myapp/templates/admin/messages/messages_list.html:36
 msgid "Oggetto"
-msgstr ""
+msgstr "الموضوع"
 
 #: myapp/forms/ContactForm.py:11 myapp/forms/booking_forms.py:12
 #: myapp/templates/admin/contacts.html:19
 #: myapp/templates/admin/contacts.html:58
 #: myapp/templates/admin/messages/messages_list.html:40
 msgid "Messaggio"
-msgstr ""
+msgstr "الرسالة"
 
 #: myapp/forms/ContactForm.py:12 myapp/forms/booking_forms.py:13
 msgid "Token"
-msgstr ""
+msgstr "الرمز"
 
 #: myapp/forms/ContactForm.py:13
 msgid "Invia"
-msgstr ""
+msgstr "إرسال"
 
 #: myapp/forms/auth_forms.py:7 myapp/forms/auth_forms.py:13
 msgid "Username"
-msgstr ""
+msgstr "اسم المستخدم"
 
 #: myapp/forms/auth_forms.py:8 myapp/forms/auth_forms.py:14
 msgid "Password"
-msgstr ""
+msgstr "كلمة المرور"
 
 #: myapp/forms/auth_forms.py:9 myapp/templates/base.html:67
 msgid "Login"
-msgstr ""
+msgstr "تسجيل الدخول"
 
 #: myapp/forms/auth_forms.py:15
 msgid "Registrati"
-msgstr ""
+msgstr "التسجيل"
 
 #: myapp/forms/booking_forms.py:10
 msgid "Location"
-msgstr ""
+msgstr "الموقع"
 
 #: myapp/forms/booking_forms.py:11
 msgid "Budget"
-msgstr ""
+msgstr "الميزانية"
 
 #: myapp/forms/booking_forms.py:14 myapp/templates/base.html:54
 msgid "Prenota"
-msgstr ""
+msgstr "احجز"
 
 #: myapp/templates/about.html:3 myapp/templates/about.html:8
 #: myapp/templates/base.html:68
 msgid "Chi siamo"
-msgstr ""
+msgstr "من نحن"
 
 #: myapp/templates/about.html:4
-msgid ""
-"Scopri chi siamo: un team esperto di wedding planner per matrimoni "
-"indimenticabili in Italia."
-msgstr ""
+msgid "Scopri chi siamo: un team esperto di wedding planner per matrimoni indimenticabili in Italia."
+msgstr "اكتشف من نحن: فريق خبراء تنظيم حفلات زفاف لزفاف لا يُنسى في إيطاليا."
 
 #: myapp/templates/about.html:11
-msgid ""
-"Siamo un team di wedding planner appassionati, con anni di esperienza "
-"nell’organizzazione di matrimoni da sogno in Italia."
-msgstr ""
+msgid "Siamo un team di wedding planner appassionati, con anni di esperienza nell’organizzazione di matrimoni da sogno in Italia."
+msgstr "نحن فريق من منظمي حفلات الزفاف المتحمسين، لدينا سنوات من الخبرة في تنظيم حفلات زفاف الأحلام في إيطاليا."
 
 #: myapp/templates/about.html:12
-msgid ""
-"Crediamo che ogni coppia meriti un matrimonio indimenticabile, curato nei"
-" minimi dettagli."
-msgstr ""
+msgid "Crediamo che ogni coppia meriti un matrimonio indimenticabile, curato nei minimi dettagli."
+msgstr "نعتقد أن كل زوجين يستحقان حفل زفاف لا يُنسى، مُعتنى به حتى أدق التفاصيل."
 
 #: myapp/templates/about.html:13
-msgid ""
-"Dalle location più esclusive ai fornitori migliori, ci occupiamo di tutto"
-" per rendere il tuo giorno davvero speciale."
-msgstr ""
+msgid "Dalle location più esclusive ai fornitori migliori, ci occupiamo di tutto per rendere il tuo giorno davvero speciale."
+msgstr "من المواقع الحصرية إلى أفضل الموردين، نعتني بكل شيء لجعل يومك مميزًا حقًا."
 
 #: myapp/templates/base.html:6
 msgid "Wedding Planner Italia"
-msgstr ""
+msgstr "منظمو حفلات الزفاف في إيطاليا"
 
 #: myapp/templates/base.html:7
 msgid "Organizzazione matrimoni in Italia: location, servizi, consigli."
-msgstr ""
+msgstr "تنظيم حفلات الزفاف في إيطاليا: المواقع، الخدمات، النصائح."
 
 #: myapp/templates/base.html:51 myapp/templates/home.html:2
 msgid "Home"
-msgstr ""
+msgstr "الرئيسية"
 
 #: myapp/templates/admin/login.html:13
 #: myapp/templates/admin/partials/admin_cards.html:3
 #: myapp/templates/admin/partials/tab_services.html:2
 #: myapp/templates/base.html:52 myapp/templates/services.html:2
 msgid "Servizi"
-msgstr ""
+msgstr "الخدمات"
 
 #: myapp/templates/base.html:53 myapp/templates/contact.html:3
 msgid "Contatti"
-msgstr ""
+msgstr "اتصل بنا"
 
 #: myapp/templates/admin/messages/messages_list.html:2
 #: myapp/templates/base.html:59
 msgid "Messaggi"
-msgstr ""
+msgstr "الرسائل"
 
 #: myapp/templates/base.html:65
 msgid "Logout"
-msgstr ""
+msgstr "تسجيل الخروج"
 
 #: myapp/templates/base.html:102
 msgid "Tutti i diritti riservati"
-msgstr ""
+msgstr "جميع الحقوق محفوظة"
 
 #: myapp/templates/booking.html:2 myapp/templates/booking.html:7
 msgid "Prenota il tuo matrimonio"
-msgstr ""
+msgstr "احجز حفل زفافك"
 
 #: myapp/templates/booking.html:3
-msgid ""
-"Prenota ora il tuo matrimonio in Italia: invia i tuoi dettagli, scegli la"
-" location e ricevi un preventivo personalizzato."
-msgstr ""
+msgid "Prenota ora il tuo matrimonio in Italia: invia i tuoi dettagli, scegli la location e ricevi un preventivo personalizzato."
+msgstr "احجز الآن حفل زفافك في إيطاليا: أرسل تفاصيلك، اختر الموقع، واحصل على عرض سعر مخصص."
 
 #: myapp/templates/booking.html:22
 msgid "Il tuo nome completo"
-msgstr ""
+msgstr "اسمك الكامل"
 
 #: myapp/templates/booking.html:26
 msgid "Indirizzo email"
-msgstr ""
+msgstr "البريد الإلكتروني"
 
 #: myapp/templates/booking.html:30
 msgid "Numero di telefono"
-msgstr ""
+msgstr "رقم الهاتف"
 
 #: myapp/templates/booking.html:34
 msgid "Luogo desiderato per il matrimonio"
-msgstr ""
+msgstr "الموقع المرغوب لحفل الزفاف"
 
 #: myapp/templates/booking.html:38
 msgid "Budget indicativo"
-msgstr ""
+msgstr "الميزانية التقريبية"
 
 #: myapp/templates/booking.html:42
 msgid "Note o richieste particolari"
-msgstr ""
+msgstr "ملاحظات أو طلبات خاصة"
 
 #: myapp/templates/collaborator_form.html:3
 #: myapp/templates/collaborator_form.html:7
 msgid "Modifica Collaboratore"
-msgstr ""
+msgstr "تعديل المتعاون"
 
 #: myapp/templates/collaborator_form.html:3
 msgid "Aggiungi Collaboratore"
-msgstr ""
+msgstr "إضافة متعاون"
 
 #: myapp/templates/collaborator_form.html:7
 msgid "Aggiungi Nuovo Collaboratore"
-msgstr ""
+msgstr "إضافة متعاون جديد"
 
 #: myapp/templates/collaborator_form.html:41
 msgid "Immagine attuale:"
-msgstr ""
+msgstr "الصورة الحالية:"
 
 #: myapp/templates/admin/users/user_form.html:40
 #: myapp/templates/collaborator_form.html:50
 #: myapp/templates/edit_gallery.html:30 myapp/templates/gallery_upload.html:20
 msgid "Annulla"
-msgstr ""
+msgstr "إلغاء"
 
 #: myapp/templates/contact.html:4
-msgid ""
-"Contatta i nostri wedding planner in Italia. Risposte rapide, servizi su "
-"misura."
-msgstr ""
+msgid "Contatta i nostri wedding planner in Italia. Risposte rapide, servizi su misura."
+msgstr "تواصل مع منظمي حفلات الزفاف لدينا في إيطاليا. ردود سريعة وخدمات مخصصة."
 
 #: myapp/templates/contact.html:8
 msgid "Contattaci"
-msgstr ""
+msgstr "اتصل بنا"
 
 #: myapp/templates/contact.html:16
 msgid "Inserisci il tuo nome"
-msgstr ""
+msgstr "أدخل اسمك"
 
 #: myapp/templates/contact.html:21
 msgid "Inserisci la tua email"
-msgstr ""
+msgstr "أدخل بريدك الإلكتروني"
 
 #: myapp/templates/contact.html:26
 msgid "Inserisci il tuo numero di telefono"
-msgstr ""
+msgstr "أدخل رقم هاتفك"
 
 #: myapp/templates/contact.html:31
 msgid "Oggetto del messaggio"
-msgstr ""
+msgstr "موضوع الرسالة"
 
 #: myapp/templates/contact.html:41
 msgid "Scrivi il tuo messaggio"
-msgstr ""
+msgstr "اكتب رسالتك"
 
 #: myapp/templates/contact.html:55
 msgid "Dove siamo"
-msgstr ""
+msgstr "موقعنا"
 
 #: myapp/templates/cookie.html:2 myapp/templates/cookie.html:6
 msgid "Cookie Policy"
-msgstr ""
+msgstr "سياسة الكوكيز"
 
 #: myapp/templates/cookie.html:7
 msgid "Questo sito usa cookie tecnici e di terze parti."
-msgstr ""
+msgstr "يستخدم هذا الموقع الكوكيز التقنية والجهات الخارجية."
 
 #: myapp/templates/edit_gallery.html:3
 msgid "Modifica Immagine Galleria"
-msgstr ""
+msgstr "تعديل صورة المعرض"
 
 #: myapp/templates/edit_gallery.html:6
 msgid "Modifica Immagine"
-msgstr ""
+msgstr "تعديل الصورة"
 
 #: myapp/templates/gallery.html:3 myapp/templates/gallery_upload.html:3
 msgid "Carica Immagine Galleria"
-msgstr ""
+msgstr "تحميل صورة المعرض"
 
 #: myapp/templates/gallery.html:6
 msgid "Carica Nuova Immagine"
-msgstr ""
+msgstr "تحميل صورة جديدة"
 
 #: myapp/templates/gallery_upload.html:7
 msgid "Carica nuova immagine"
-msgstr ""
+msgstr "تحميل صورة جديدة"
 
 #: myapp/templates/gallery_upload.html:19 myapp/templates/upload.html:14
 #: myapp/templates/upload_image.html:16
 msgid "Carica"
-msgstr ""
+msgstr "تحميل"
 
 #: myapp/templates/home.html:3
 msgid "Benvenuti nel nostro mondo di matrimoni su misura in Italia"
-msgstr ""
+msgstr "مرحبًا بك في عالمنا لحفلات الزفاف المصممة حسب الطلب في إيطاليا"
 
 #: myapp/templates/home.html:7
 msgid "Benvenuti nel nostro mondo di matrimoni da sogno"
-msgstr ""
+msgstr "مرحبًا بك في عالمنا لحفلات الزفاف الحالمة"
 
 #: myapp/templates/home.html:8
 msgid "Organizziamo ogni dettaglio con amore e passione"
-msgstr ""
+msgstr "نحن ننظم كل التفاصيل بحب وشغف"
 
 #: myapp/templates/home.html:13 myapp/templates/services.html:12
 msgid "I nostri Servizi"
-msgstr ""
+msgstr "خدماتنا"
 
 #: myapp/templates/admin/partials/admin_cards.html:15
 #: myapp/templates/home.html:27
 msgid "Galleria"
-msgstr ""
+msgstr "المعرض"
 
 #: myapp/templates/home.html:31
 msgid "Immagine Galleria"
-msgstr ""
+msgstr "صورة المعرض"
 
 #: myapp/templates/home.html:40
 msgid "I nostri Collaboratori"
-msgstr ""
+msgstr "المتعاونون معنا"
 
 #: myapp/templates/privacy.html:2 myapp/templates/privacy.html:6
 msgid "Privacy Policy"
-msgstr ""
+msgstr "سياسة الخصوصية"
 
 #: myapp/templates/privacy.html:7
 msgid "Questa è la nostra informativa sulla privacy secondo il GDPR."
-msgstr ""
+msgstr "هذه هي سياسة الخصوصية الخاصة بنا وفقًا للائحة GDPR."
 
 #: myapp/templates/service_form.html:3 myapp/templates/service_form.html:7
 msgid "Modifica Servizio"
-msgstr ""
+msgstr "تعديل الخدمة"
 
 #: myapp/templates/service_form.html:3
 msgid "Crea Servizio"
-msgstr ""
+msgstr "إنشاء خدمة"
 
 #: myapp/templates/service_form.html:7
 msgid "Crea Nuovo Servizio"
-msgstr ""
+msgstr "إنشاء خدمة جديدة"
 
 #: myapp/templates/services.html:3
-msgid ""
-"Scopri tutti i servizi per il tuo matrimonio da sogno: location, "
-"catering, allestimenti e molto altro."
-msgstr ""
+msgid "Scopri tutti i servizi per il tuo matrimonio da sogno: location, catering, allestimenti e molto altro."
+msgstr "اكتشف جميع الخدمات لحفل زفاف أحلامك: المواقع، تقديم الطعام، الترتيبات والمزيد."
 
 #: myapp/templates/services.html:7
 msgid "Scopri i nostri servizi esclusivi"
-msgstr ""
+msgstr "اكتشف خدماتنا الحصرية"
 
 #: myapp/templates/services.html:8
 msgid "Dalla pianificazione all’allestimento, ogni dettaglio è curato con stile."
-msgstr ""
+msgstr "من التخطيط إلى الترتيب، يتم العناية بكل تفصيل بأناقة."
 
 #: myapp/templates/services.html:20
 msgid "Nessun servizio disponibile al momento."
-msgstr ""
+msgstr "لا توجد خدمات متاحة في الوقت الحالي."
 
 #: myapp/templates/thankyou.html:2
 msgid "Grazie"
-msgstr ""
+msgstr "شكرًا"
 
 #: myapp/templates/thankyou.html:3
-msgid ""
-"Grazie per averci contattato. Ti risponderemo al più presto con una "
-"proposta personalizzata."
-msgstr ""
+msgid "Grazie per averci contattato. Ti risponderemo al più presto con una proposta personalizzata."
+msgstr "شكرًا لتواصلك معنا. سنرد عليك في أقرب وقت ممكن بعرض مخصص."
 
 #: myapp/templates/thankyou.html:9
 msgid "Ti risponderemo il prima possibile."
-msgstr ""
+msgstr "سنرد عليك في أقرب وقت ممكن."
 
 #: myapp/templates/upload.html:2
 msgid "Carica immagine"
-msgstr ""
+msgstr "تحميل صورة"
 
 #: myapp/templates/upload.html:5 myapp/templates/upload_image.html:6
 msgid "Carica una nuova immagine"
-msgstr ""
+msgstr "تحميل صورة جديدة"
 
 #: myapp/templates/upload.html:8
 msgid "Seleziona immagine"
-msgstr ""
+msgstr "اختر صورة"
 
 #: myapp/templates/upload.html:11
 msgid "Descrizione (opzionale)"
-msgstr ""
+msgstr "الوصف (اختياري)"
 
 #: myapp/templates/admin/partials/admin_cards.html:21
 #: myapp/templates/upload_image.html:2
 msgid "Carica Immagine"
-msgstr ""
+msgstr "تحميل صورة"
+
+#: myapp/templates/upload.html:5 myapp/templates/upload_image.html:6
+msgid "Carica una nuova immagine"
+msgstr "تحميل صورة جديدة"
+
+#: myapp/templates/upload.html:8
+msgid "Seleziona immagine"
+msgstr "اختر صورة"
+
+#: myapp/templates/upload.html:11
+msgid "Descrizione (opzionale)"
+msgstr "الوصف (اختياري)"
+
+#: myapp/templates/admin/partials/admin_cards.html:21
+#: myapp/templates/upload_image.html:2
+msgid "Carica Immagine"
+msgstr "تحميل صورة"
 
 #: myapp/templates/upload_image.html:9
 msgid "Scegli file immagine"
-msgstr ""
+msgstr "اختر ملف الصورة"
 
 #: myapp/templates/upload_image.html:13
 msgid "Didascalia (facoltativa)"
-msgstr ""
+msgstr "التسمية التوضيحية (اختياري)"
 
 #: myapp/templates/upload_image.html:17
 msgid "Torna alla Dashboard"
-msgstr ""
+msgstr "العودة إلى لوحة التحكم"
 
 #: myapp/templates/admin/contacts.html:2
 msgid "Messaggi di Contatto"
-msgstr ""
+msgstr "رسائل التواصل"
 
 #: myapp/templates/admin/contacts.html:6
 msgid "Messaggi di contatto"
-msgstr ""
+msgstr "رسائل التواصل"
 
 #: myapp/templates/admin/contacts.html:7
 msgid "Messaggi non letti"
-msgstr ""
+msgstr "رسائل غير مقروءة"
 
 #: myapp/templates/admin/contacts.html:9
 #: myapp/templates/admin/messages/messages_list.html:7
 msgid "Cerca..."
-msgstr ""
+msgstr "بحث..."
 
 #: myapp/templates/admin/contacts.html:18
 msgid "Motivo"
-msgstr ""
+msgstr "السبب"
 
 #: myapp/templates/admin/contacts.html:20
 #: myapp/templates/admin/messages/messages_list.html:15
 msgid "Data"
-msgstr ""
+msgstr "التاريخ"
 
 #: myapp/templates/admin/contacts.html:21
 msgid "Stato"
-msgstr ""
+msgstr "الحالة"
 
 #: myapp/templates/admin/contacts.html:39
 msgid "Letto"
-msgstr ""
+msgstr "مقروء"
 
 #: myapp/templates/admin/contacts.html:39
 msgid "Non letto"
-msgstr ""
+msgstr "غير مقروء"
 
 #: myapp/templates/admin/contacts.html:48
 #: myapp/templates/admin/messages/messages_list.html:30
 msgid "Esporta in Excel"
-msgstr ""
+msgstr "تصدير إلى إكسل"
 
 #: myapp/templates/admin/contacts.html:50
 #: myapp/templates/admin/messages/messages_list.html:32
 msgid "Rispondi al messaggio"
-msgstr ""
+msgstr "رد على الرسالة"
 
 #: myapp/templates/admin/contacts.html:61
 #: myapp/templates/admin/messages/messages_list.html:43
 msgid "Invia Email"
-msgstr ""
+msgstr "إرسال بريد إلكتروني"
 
 #: myapp/templates/admin/login.html:4
 msgid ""
 "Accedi alla dashboard per gestire i servizi matrimoniali e le "
 "prenotazioni."
-msgstr ""
+msgstr "قم بتسجيل الدخول إلى لوحة التحكم لإدارة خدمات الزفاف والحجوزات."
 
 #: myapp/templates/admin/login.html:8
 msgid "Dashboard"
-msgstr ""
+msgstr "لوحة التحكم"
 
 #: myapp/templates/admin/login.html:9
 msgid "Benvenuto,"
-msgstr ""
+msgstr "مرحبًا،"
 
 #: myapp/templates/admin/login.html:14
 #: myapp/templates/admin/partials/admin_cards.html:11
 #: myapp/templates/admin/partials/tab_services.html:4
 msgid "Aggiungi Servizio"
-msgstr ""
+msgstr "إضافة خدمة"
 
 #: myapp/templates/admin/login.html:19
 msgid "ID"
-msgstr ""
+msgstr "المعرف"
 
 #: myapp/templates/admin/login.html:21
 msgid "Descrizione"
-msgstr ""
+msgstr "الوصف"
 
 #: myapp/templates/admin/login.html:22
 msgid "Azioni"
-msgstr ""
+msgstr "الإجراءات"
 
 #: myapp/templates/admin/login.html:32
 #: myapp/templates/admin/partials/admin_cards.html:6
 msgid "Modifica"
-msgstr ""
+msgstr "تعديل"
 
 #: myapp/templates/admin/login.html:34
 msgid "Elimina"
-msgstr ""
+msgstr "حذف"
 
 #: myapp/templates/admin/login.html:40
 #: myapp/templates/admin/partials/tab_services.html:9
 msgid "Nessun servizio presente."
-msgstr ""
+msgstr "لا توجد خدمات متاحة."
 
 #: myapp/templates/admin/login.html:49
 msgid "Sei sicuro di voler eliminare questo servizio?"
-msgstr ""
+msgstr "هل أنت متأكد أنك تريد حذف هذه الخدمة؟"
 
 #: myapp/templates/admin/messages/messages_list.html:5
 msgid "Messaggi ricevuti"
-msgstr ""
+msgstr "الرسائل الواردة"
 
 #: myapp/templates/admin/partials/admin_cards.html:8
 msgid "Nessun servizio"
-msgstr ""
+msgstr "لا توجد خدمات"
 
 #: myapp/templates/admin/partials/admin_cards.html:19
 msgid "Nessuna immagine"
-msgstr ""
+msgstr "لا توجد صور"
 
 #: myapp/templates/admin/partials/admin_cards.html:25
 msgid "Prenotazioni"
-msgstr ""
+msgstr "الحجوزات"
 
 #: myapp/templates/admin/partials/admin_cards.html:30
 msgid "Nessuna prenotazione"
-msgstr ""
+msgstr "لا توجد حجوزات"
 
 #: myapp/templates/admin/partials/tab_services.html:3
 msgid "Esporta Servizi (CSV)"
-msgstr ""
+msgstr "تصدير الخدمات (CSV)"
 
 #: myapp/templates/admin/users/user_form.html:3
 #: myapp/templates/admin/users/user_form.html:7
 msgid "Modifica Utente"
-msgstr ""
+msgstr "تعديل المستخدم"
 
 #: myapp/templates/admin/users/user_form.html:3
 msgid "Aggiungi Utente"
-msgstr ""
+msgstr "إضافة مستخدم"
 
 #: myapp/templates/admin/users/user_form.html:7
 msgid "Crea Nuovo Utente"
-msgstr ""
+msgstr "إنشاء مستخدم جديد"
 
 #: myapp/templates/admin/users/user_form.html:24
 msgid "Lascia vuoto per mantenere la password corrente"
-msgstr ""
+msgstr "اتركه فارغًا للاحتفاظ بكلمة المرور الحالية"
 
 #: myapp/utils/admin_utils.py:12
 msgid "Accesso non autorizzato"
-msgstr ""
-
+msgstr "دخول غير مصرح به"
