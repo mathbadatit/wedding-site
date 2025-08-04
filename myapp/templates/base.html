@@ -44,9 +44,6 @@
 </head>
 
 <body>
-
-<p>Lingua corrente: {{ get_locale() }}</p>
-
 <header class="bg-light shadow-sm mb-4">
   <nav class="navbar navbar-expand-lg navbar-light container">
     <a class="navbar-brand" href="{{ url_for('main.home') }}">
@@ -54,8 +51,6 @@
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
-      {% block extra_scripts %}{% endblock %}
-      {% block scripts %}{% endblock %}
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -74,23 +69,24 @@
               {% endif %}
             </a>
           </li>
-          <li class="nav-item">
-            <span class="nav-link disabled">{{ current_user.name or current_user.email }}</span>
-          </li>
+          <li class="nav-item"><span class="nav-link disabled">{{ current_user.name or current_user.email }}</span></li>
           <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
         {% else %}
           <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
         {% endif %}
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {{ get_locale().upper() }}
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('main.setlang', lang_code='it') }}">IT</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('main.setlang', lang_code='en') }}">EN</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('main.setlang', lang_code='ar') }}">AR</a></li>
-          </ul>
+        <li class="nav-item">
+          <div class="lang-switcher d-flex gap-2 align-items-center">
+            <a href="{{ url_for('main.set_language', lang_code='it') }}">
+              <img src="{{ url_for('static', filename='uploads/flags/it.svg') }}" alt="Italiano" width="24">
+            </a>
+            <a href="{{ url_for('main.set_language', lang_code='en') }}">
+              <img src="{{ url_for('static', filename='uploads/flags/en.svg') }}" alt="English" width="24">
+            </a>
+            <a href="{{ url_for('main.set_language', lang_code='ar') }}">
+              <img src="{{ url_for('static', filename='uploads/flags/ar.svg') }}" alt="Arabic" width="24">
+            </a>
+          </div>
         </li>
       </ul>
     </div>
@@ -117,13 +113,21 @@
   </div>
 </footer>
 
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
 <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
 <script src="{{ url_for('static', filename='js/language_switcher.js') }}"></script>
 
+<!-- Dark mode toggle -->
+<div class="theme-toggle">
+  <label class="switch">
+    <input type="checkbox" id="theme-switch" aria-label="Toggle dark mode">
+    <span class="slider"></span>
+  </label>
+</div>
 <script>
   const switchInput = document.getElementById('theme-switch');
   const savedTheme = localStorage.getItem('theme');
@@ -145,26 +149,16 @@
     }
   });
 </script>
-<!-- MODALE STATICO PER SERVIZI -->
+
+<!-- Modal servizi -->
 <div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body" id="modal-content">
-        <!-- Qui caricherai il contenuto dinamico -->
+        <!-- Content loaded dynamically -->
       </div>
     </div>
   </div>
 </div>
-
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-<div class="theme-toggle">
-  <label class="switch">
-    <input type="checkbox" id="theme-switch" aria-label="Toggle dark mode">
-    <span class="slider"></span>
-  </label>
-</div>
