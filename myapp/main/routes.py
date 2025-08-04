@@ -1,7 +1,8 @@
-from flask import render_template, request, session, redirect, url_for, current_app
+from flask import render_template, request, session, redirect, url_for, current_app, session
 from flask_login import current_user
 from myapp.models import Service, GalleryImage, Collaborator, ContactMessage
 from myapp.main import bp  # blueprint definito in __init__.py
+from flask_babel import Babel
 
 # Home Page
 @bp.route('/')
@@ -58,3 +59,12 @@ def contact():
 def setlang(lang_code):
     session['lang'] = lang_code
     return redirect(request.referrer or url_for('main.home'))
+
+@bp.route('/set_language/<lang_code>')
+def set_language(lang_code):
+    session['lang'] = lang_code
+    return redirect(request.referrer or url_for('main.home'))
+
+@babel.localeselector
+def get_locale():
+    return session.get('lang', request.accept_languages.best_match(['en', 'it', 'ar']))
