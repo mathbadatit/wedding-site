@@ -1,34 +1,14 @@
-# Arabic translations for PROJECT.
-# Copyright (C) 2025 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
-#
-msgid ""
-msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-22 09:34+0200\n"
-"PO-Revision-Date: 2025-07-22 18:01+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ar\n"
-"Language-Team: ar <LL@li.org>\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
-
 #: myapp/contact.py:16
 msgid "Verifica reCAPTCHA fallita. Riprova."
-msgstr "فشل التحقق من reCAPTCHA. الرجاء المحاولة مرة أخرى."
+msgstr "فشل التحقق من reCAPTCHA. حاول مرة أخرى."
 
 #: myapp/contact.py:35
 msgid "Grazie per averci contattato! Ti risponderemo al più presto."
-msgstr "شكرًا لتواصلك معنا! سنرد عليك في أقرب وقت ممكن."
+msgstr "شكرًا لتواصلك معنا! سنرد عليك في أقرب وقت."
 
 #: myapp/contact.py:37
 msgid "Errore nell'invio della mail, ma messaggio salvato."
-msgstr "حدث خطأ أثناء إرسال البريد الإلكتروني، ولكن تم حفظ الرسالة."
+msgstr "حدث خطأ أثناء إرسال البريد الإلكتروني، لكن تم حفظ الرسالة."
 
 #: myapp/email_utils.py:18 myapp/email_utils.py:42
 #: myapp/templates/thankyou.html:8
@@ -37,7 +17,7 @@ msgstr "شكرًا لتواصلك معنا!"
 
 #: myapp/email_utils.py:19 myapp/email_utils.py:43
 msgid "Ti risponderemo al più presto."
-msgstr "سنرد عليك في أقرب وقت ممكن."
+msgstr "سنرد عليك في أقرب وقت."
 
 #: myapp/forms/ContactForm.py:7 myapp/forms/booking_forms.py:7
 #: myapp/templates/admin/contacts.html:14 myapp/templates/admin/login.html:20
@@ -92,7 +72,7 @@ msgstr "تسجيل الدخول"
 
 #: myapp/forms/auth_forms.py:15
 msgid "Registrati"
-msgstr "التسجيل"
+msgstr "إنشاء حساب"
 
 #: myapp/forms/booking_forms.py:10
 msgid "Location"
@@ -113,19 +93,19 @@ msgstr "من نحن"
 
 #: myapp/templates/about.html:4
 msgid "Scopri chi siamo: un team esperto di wedding planner per matrimoni indimenticabili in Italia."
-msgstr "اكتشف من نحن: فريق خبراء تنظيم حفلات زفاف لزفاف لا يُنسى في إيطاليا."
+msgstr "تعرف علينا: فريق محترف من منظمي حفلات الزفاف لأعراس لا تُنسى في إيطاليا."
 
 #: myapp/templates/about.html:11
 msgid "Siamo un team di wedding planner appassionati, con anni di esperienza nell’organizzazione di matrimoni da sogno in Italia."
-msgstr "نحن فريق من منظمي حفلات الزفاف المتحمسين، لدينا سنوات من الخبرة في تنظيم حفلات زفاف الأحلام في إيطاليا."
+msgstr "نحن فريق من منظمي حفلات الزفاف الشغوفين، مع سنوات من الخبرة في تنظيم أعراس الأحلام في إيطاليا."
 
 #: myapp/templates/about.html:12
 msgid "Crediamo che ogni coppia meriti un matrimonio indimenticabile, curato nei minimi dettagli."
-msgstr "نعتقد أن كل زوجين يستحقان حفل زفاف لا يُنسى، مُعتنى به حتى أدق التفاصيل."
+msgstr "نؤمن أن كل زوجين يستحقان حفل زفاف لا يُنسى، مُعتنى به حتى أدق التفاصيل."
 
 #: myapp/templates/about.html:13
 msgid "Dalle location più esclusive ai fornitori migliori, ci occupiamo di tutto per rendere il tuo giorno davvero speciale."
-msgstr "من المواقع الحصرية إلى أفضل الموردين، نعتني بكل شيء لجعل يومك مميزًا حقًا."
+msgstr "من المواقع الحصرية إلى أفضل المزودين، نتولى كل شيء لجعل يومك مميزًا حقًا."
 
 #: myapp/templates/base.html:6
 msgid "Wedding Planner Italia"
@@ -148,7 +128,7 @@ msgstr "الخدمات"
 
 #: myapp/templates/base.html:53 myapp/templates/contact.html:3
 msgid "Contatti"
-msgstr "اتصل بنا"
+msgstr "تواصل معنا"
 
 #: myapp/templates/admin/messages/messages_list.html:2
 #: myapp/templates/base.html:59
@@ -157,7 +137,7 @@ msgstr "الرسائل"
 
 #: myapp/templates/base.html:65
 msgid "Logout"
-msgstr "تسجيل الخروج"
+msgstr "تسجيل خروج"
 
 #: myapp/templates/base.html:102
 msgid "Tutti i diritti riservati"
@@ -185,11 +165,11 @@ msgstr "رقم الهاتف"
 
 #: myapp/templates/booking.html:34
 msgid "Luogo desiderato per il matrimonio"
-msgstr "الموقع المرغوب لحفل الزفاف"
+msgstr "المكان المرغوب لحفل الزفاف"
 
 #: myapp/templates/booking.html:38
 msgid "Budget indicativo"
-msgstr "الميزانية التقريبية"
+msgstr "الميزانية التقديرية"
 
 #: myapp/templates/booking.html:42
 msgid "Note o richieste particolari"
@@ -198,15 +178,15 @@ msgstr "ملاحظات أو طلبات خاصة"
 #: myapp/templates/collaborator_form.html:3
 #: myapp/templates/collaborator_form.html:7
 msgid "Modifica Collaboratore"
-msgstr "تعديل المتعاون"
+msgstr "تعديل الشريك"
 
 #: myapp/templates/collaborator_form.html:3
 msgid "Aggiungi Collaboratore"
-msgstr "إضافة متعاون"
+msgstr "إضافة شريك"
 
 #: myapp/templates/collaborator_form.html:7
 msgid "Aggiungi Nuovo Collaboratore"
-msgstr "إضافة متعاون جديد"
+msgstr "إضافة شريك جديد"
 
 #: myapp/templates/collaborator_form.html:41
 msgid "Immagine attuale:"
@@ -220,7 +200,7 @@ msgstr "إلغاء"
 
 #: myapp/templates/contact.html:4
 msgid "Contatta i nostri wedding planner in Italia. Risposte rapide, servizi su misura."
-msgstr "تواصل مع منظمي حفلات الزفاف لدينا في إيطاليا. ردود سريعة وخدمات مخصصة."
+msgstr "تواصل مع منظمي حفلات الزفاف لدينا في إيطاليا. ردود سريعة، وخدمات مخصصة."
 
 #: myapp/templates/contact.html:8
 msgid "Contattaci"
@@ -248,7 +228,7 @@ msgstr "اكتب رسالتك"
 
 #: myapp/templates/contact.html:55
 msgid "Dove siamo"
-msgstr "موقعنا"
+msgstr "أين نحن"
 
 #: myapp/templates/cookie.html:2 myapp/templates/cookie.html:6
 msgid "Cookie Policy"
@@ -256,7 +236,7 @@ msgstr "سياسة الكوكيز"
 
 #: myapp/templates/cookie.html:7
 msgid "Questo sito usa cookie tecnici e di terze parti."
-msgstr "يستخدم هذا الموقع الكوكيز التقنية والجهات الخارجية."
+msgstr "يستخدم هذا الموقع ملفات تعريف الارتباط التقنية وملفات الطرف الثالث."
 
 #: myapp/templates/edit_gallery.html:3
 msgid "Modifica Immagine Galleria"
@@ -285,11 +265,11 @@ msgstr "تحميل"
 
 #: myapp/templates/home.html:3
 msgid "Benvenuti nel nostro mondo di matrimoni su misura in Italia"
-msgstr "مرحبًا بك في عالمنا لحفلات الزفاف المصممة حسب الطلب في إيطاليا"
+msgstr "مرحبًا بكم في عالمنا من حفلات الزفاف المصممة خصيصًا في إيطاليا"
 
 #: myapp/templates/home.html:7
 msgid "Benvenuti nel nostro mondo di matrimoni da sogno"
-msgstr "مرحبًا بك في عالمنا لحفلات الزفاف الحالمة"
+msgstr "مرحبًا بكم في عالمنا من حفلات الزفاف الخيالية"
 
 #: myapp/templates/home.html:8
 msgid "Organizziamo ogni dettaglio con amore e passione"
@@ -310,7 +290,7 @@ msgstr "صورة المعرض"
 
 #: myapp/templates/home.html:40
 msgid "I nostri Collaboratori"
-msgstr "المتعاونون معنا"
+msgstr "شركاؤنا"
 
 #: myapp/templates/privacy.html:2 myapp/templates/privacy.html:6
 msgid "Privacy Policy"
@@ -334,7 +314,7 @@ msgstr "إنشاء خدمة جديدة"
 
 #: myapp/templates/services.html:3
 msgid "Scopri tutti i servizi per il tuo matrimonio da sogno: location, catering, allestimenti e molto altro."
-msgstr "اكتشف جميع الخدمات لحفل زفاف أحلامك: المواقع، تقديم الطعام، الترتيبات والمزيد."
+msgstr "اكتشف جميع الخدمات لحفل زفاف أحلامك: المواقع، التموين، التجهيزات والمزيد."
 
 #: myapp/templates/services.html:7
 msgid "Scopri i nostri servizi esclusivi"
@@ -342,7 +322,7 @@ msgstr "اكتشف خدماتنا الحصرية"
 
 #: myapp/templates/services.html:8
 msgid "Dalla pianificazione all’allestimento, ogni dettaglio è curato con stile."
-msgstr "من التخطيط إلى الترتيب، يتم العناية بكل تفصيل بأناقة."
+msgstr "من التخطيط إلى التجهيز، كل تفصيل يُعتنى به بأناقة."
 
 #: myapp/templates/services.html:20
 msgid "Nessun servizio disponibile al momento."
@@ -354,7 +334,7 @@ msgstr "شكرًا"
 
 #: myapp/templates/thankyou.html:3
 msgid "Grazie per averci contattato. Ti risponderemo al più presto con una proposta personalizzata."
-msgstr "شكرًا لتواصلك معنا. سنرد عليك في أقرب وقت ممكن بعرض مخصص."
+msgstr "شكرًا لتواصلك معنا. سنرد عليك قريبًا بعرض مخصص."
 
 #: myapp/templates/thankyou.html:9
 msgid "Ti risponderemo il prima possibile."
@@ -362,23 +342,6 @@ msgstr "سنرد عليك في أقرب وقت ممكن."
 
 #: myapp/templates/upload.html:2
 msgid "Carica immagine"
-msgstr "تحميل صورة"
-
-#: myapp/templates/upload.html:5 myapp/templates/upload_image.html:6
-msgid "Carica una nuova immagine"
-msgstr "تحميل صورة جديدة"
-
-#: myapp/templates/upload.html:8
-msgid "Seleziona immagine"
-msgstr "اختر صورة"
-
-#: myapp/templates/upload.html:11
-msgid "Descrizione (opzionale)"
-msgstr "الوصف (اختياري)"
-
-#: myapp/templates/admin/partials/admin_cards.html:21
-#: myapp/templates/upload_image.html:2
-msgid "Carica Immagine"
 msgstr "تحميل صورة"
 
 #: myapp/templates/upload.html:5 myapp/templates/upload_image.html:6
@@ -439,6 +402,24 @@ msgstr "التاريخ"
 #: myapp/templates/admin/contacts.html:21
 msgid "Stato"
 msgstr "الحالة"
+
+#: myapp/templates/admin/contacts.html:39
+msgid "Letto"
+msgstr "مقروء"
+
+#: myapp/templates/admin/contacts.html:39
+msgid "Non letto"
+msgstr "غير مقروء"
+
+#: myapp/templates/admin/contacts.html:48
+#: myapp/templates/admin/messages/messages_list.html:30
+msgid "Esporta in Excel"
+msgstr "تصدير إلى إكسل"
+
+#: myapp/templates/admin/contacts.html:50
+#: myapp/templates/admin/messages/messages_list.html:32
+msgid "Rispondi al messaggio"
+msgstr "رد على الرسالة"
 
 #: myapp/templates/admin/contacts.html:39
 msgid "Letto"
