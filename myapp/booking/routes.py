@@ -23,3 +23,4 @@ def book():
         flash('Prenotazione inviata!', 'success')
         return redirect(url_for('main.home'))
     return render_template('booking.html', form=form)
+print("Booking form data:", request.form)
