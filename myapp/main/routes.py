@@ -62,7 +62,8 @@ def setlang(lang_code):
 
 @bp.route('/set_language/<lang_code>')
 def set_language(lang_code):
-    session['lang'] = lang_code
+    if lang_code in ['it', 'en', 'ar']:
+        session['lang'] = lang_code
     return redirect(request.referrer or url_for('main.home'))
 
 @babel.localeselector
