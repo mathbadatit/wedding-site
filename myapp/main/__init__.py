@@ -1,6 +1,7 @@
 from flask import Blueprint, request, session
 
 bp = Blueprint('main', __name__)
+app.config['SESSION_PERMANENT'] = False
 
 @bp.before_app_request
 def detect_lang():
