@@ -1,4 +1,4 @@
-# Italian translations for PROJECT.
+# English translations for PROJECT.
 # Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2025-07-22 09:34+0200\n"
 "PO-Revision-Date: 2025-07-22 18:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: it\n"
-"Language-Team: it <LL@li.org>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,30 +20,30 @@ msgstr ""
 
 #: myapp/contact.py:16
 msgid "Verifica reCAPTCHA fallita. Riprova."
-msgstr "Verifica reCAPTCHA fallita. Riprova."
+msgstr "reCAPTCHA verification failed. Please try again."
 
 #: myapp/contact.py:35
 msgid "Grazie per averci contattato! Ti risponderemo al più presto."
-msgstr "Grazie per averci contattato! Ti risponderemo al più presto."
+msgstr "Thank you for contacting us! We will get back to you as soon as possible."
 
 #: myapp/contact.py:37
 msgid "Errore nell'invio della mail, ma messaggio salvato."
-msgstr "Errore nell'invio della mail, ma messaggio salvato."
+msgstr "Error sending email, but message saved."
 
 #: myapp/email_utils.py:18 myapp/email_utils.py:42
 #: myapp/templates/thankyou.html:8
 msgid "Grazie per averci contattato!"
-msgstr "Grazie per averci contattato!"
+msgstr "Thank you for contacting us!"
 
 #: myapp/email_utils.py:19 myapp/email_utils.py:43
 msgid "Ti risponderemo al più presto."
-msgstr "Ti risponderemo al più presto."
+msgstr "We will respond to you as soon as possible."
 
 #: myapp/forms/ContactForm.py:7 myapp/forms/booking_forms.py:7
 #: myapp/templates/admin/contacts.html:14 myapp/templates/admin/login.html:20
 #: myapp/templates/admin/messages/messages_list.html:12
 msgid "Nome"
-msgstr "Nome"
+msgstr "Name"
 
 #: myapp/forms/ContactForm.py:8 myapp/forms/auth_forms.py:12
 #: myapp/forms/booking_forms.py:8 myapp/templates/admin/contacts.html:15
@@ -54,21 +54,21 @@ msgstr "Email"
 #: myapp/forms/ContactForm.py:9 myapp/forms/booking_forms.py:9
 #: myapp/templates/admin/contacts.html:16
 msgid "Telefono"
-msgstr "Telefono"
+msgstr "Phone"
 
 #: myapp/forms/ContactForm.py:10 myapp/templates/admin/contacts.html:17
 #: myapp/templates/admin/contacts.html:54
 #: myapp/templates/admin/messages/messages_list.html:14
 #: myapp/templates/admin/messages/messages_list.html:36
 msgid "Oggetto"
-msgstr "Oggetto"
+msgstr "Subject"
 
 #: myapp/forms/ContactForm.py:11 myapp/forms/booking_forms.py:12
 #: myapp/templates/admin/contacts.html:19
 #: myapp/templates/admin/contacts.html:58
 #: myapp/templates/admin/messages/messages_list.html:40
 msgid "Messaggio"
-msgstr "Messaggio"
+msgstr "Message"
 
 #: myapp/forms/ContactForm.py:12 myapp/forms/booking_forms.py:13
 msgid "Token"
@@ -76,7 +76,7 @@ msgstr "Token"
 
 #: myapp/forms/ContactForm.py:13
 msgid "Invia"
-msgstr "Invia"
+msgstr "Send"
 
 #: myapp/forms/auth_forms.py:7 myapp/forms/auth_forms.py:13
 msgid "Username"
@@ -92,7 +92,7 @@ msgstr "Login"
 
 #: myapp/forms/auth_forms.py:15
 msgid "Registrati"
-msgstr "Registrati"
+msgstr "Register"
 
 #: myapp/forms/booking_forms.py:10
 msgid "Location"
@@ -104,36 +104,36 @@ msgstr "Budget"
 
 #: myapp/forms/booking_forms.py:14 myapp/templates/base.html:54
 msgid "Prenota"
-msgstr "Prenota"
+msgstr "Book"
 
 #: myapp/templates/about.html:3 myapp/templates/about.html:8
 #: myapp/templates/base.html:68
 msgid "Chi siamo"
-msgstr "Chi siamo"
+msgstr "About Us"
 
 #: myapp/templates/about.html:4
 msgid "Scopri chi siamo: un team esperto di wedding planner per matrimoni indimenticabili in Italia."
-msgstr "Scopri chi siamo: un team esperto di wedding planner per matrimoni indimenticabili in Italia."
+msgstr "Discover who we are: an expert team of wedding planners for unforgettable weddings in Italy."
 
 #: myapp/templates/about.html:11
 msgid "Siamo un team di wedding planner appassionati, con anni di esperienza nell’organizzazione di matrimoni da sogno in Italia."
-msgstr "Siamo un team di wedding planner appassionati, con anni di esperienza nell’organizzazione di matrimoni da sogno in Italia."
+msgstr "We are a team of passionate wedding planners with years of experience organizing dream weddings in Italy."
 
 #: myapp/templates/about.html:12
 msgid "Crediamo che ogni coppia meriti un matrimonio indimenticabile, curato nei minimi dettagli."
-msgstr "Crediamo che ogni coppia meriti un matrimonio indimenticabile, curato nei minimi dettagli."
+msgstr "We believe every couple deserves an unforgettable wedding, carefully curated down to the smallest detail."
 
 #: myapp/templates/about.html:13
 msgid "Dalle location più esclusive ai fornitori migliori, ci occupiamo di tutto per rendere il tuo giorno davvero speciale."
-msgstr "Dalle location più esclusive ai fornitori migliori, ci occupiamo di tutto per rendere il tuo giorno davvero speciale."
+msgstr "From the most exclusive locations to the best suppliers, we take care of everything to make your day truly special."
 
 #: myapp/templates/base.html:6
 msgid "Wedding Planner Italia"
-msgstr "Wedding Planner Italia"
+msgstr "Wedding Planner Italy"
 
 #: myapp/templates/base.html:7
 msgid "Organizzazione matrimoni in Italia: location, servizi, consigli."
-msgstr "Organizzazione matrimoni in Italia: location, servizi, consigli."
+msgstr "Wedding organization in Italy: locations, services, advice."
 
 #: myapp/templates/base.html:51 myapp/templates/home.html:2
 msgid "Home"
@@ -144,16 +144,16 @@ msgstr "Home"
 #: myapp/templates/admin/partials/tab_services.html:2
 #: myapp/templates/base.html:52 myapp/templates/services.html:2
 msgid "Servizi"
-msgstr "Servizi"
+msgstr "Services"
 
 #: myapp/templates/base.html:53 myapp/templates/contact.html:3
 msgid "Contatti"
-msgstr "Contatti"
+msgstr "Contact"
 
 #: myapp/templates/admin/messages/messages_list.html:2
 #: myapp/templates/base.html:59
 msgid "Messaggi"
-msgstr "Messaggi"
+msgstr "Messages"
 
 #: myapp/templates/base.html:65
 msgid "Logout"
@@ -161,94 +161,94 @@ msgstr "Logout"
 
 #: myapp/templates/base.html:102
 msgid "Tutti i diritti riservati"
-msgstr "Tutti i diritti riservati"
+msgstr "All rights reserved"
 
 #: myapp/templates/booking.html:2 myapp/templates/booking.html:7
 msgid "Prenota il tuo matrimonio"
-msgstr "Prenota il tuo matrimonio"
+msgstr "Book Your Wedding"
 
 #: myapp/templates/booking.html:3
 msgid "Prenota ora il tuo matrimonio in Italia: invia i tuoi dettagli, scegli la location e ricevi un preventivo personalizzato."
-msgstr "Prenota ora il tuo matrimonio in Italia: invia i tuoi dettagli, scegli la location e ricevi un preventivo personalizzato."
+msgstr "Book your wedding in Italy now: submit your details, choose the location, and receive a personalized quote."
 
 #: myapp/templates/booking.html:22
 msgid "Il tuo nome completo"
-msgstr "Il tuo nome completo"
+msgstr "Your Full Name"
 
 #: myapp/templates/booking.html:26
 msgid "Indirizzo email"
-msgstr "Indirizzo email"
+msgstr "Email Address"
 
 #: myapp/templates/booking.html:30
 msgid "Numero di telefono"
-msgstr "Numero di telefono"
+msgstr "Phone Number"
 
 #: myapp/templates/booking.html:34
 msgid "Luogo desiderato per il matrimonio"
-msgstr "Luogo desiderato per il matrimonio"
+msgstr "Desired Wedding Location"
 
 #: myapp/templates/booking.html:38
 msgid "Budget indicativo"
-msgstr "Budget indicativo"
+msgstr "Estimated Budget"
 
 #: myapp/templates/booking.html:42
 msgid "Note o richieste particolari"
-msgstr "Note o richieste particolari"
+msgstr "Notes or Special Requests"
 
 #: myapp/templates/collaborator_form.html:3
 #: myapp/templates/collaborator_form.html:7
 msgid "Modifica Collaboratore"
-msgstr "Modifica Collaboratore"
+msgstr "Edit Collaborator"
 
 #: myapp/templates/collaborator_form.html:3
 msgid "Aggiungi Collaboratore"
-msgstr "Aggiungi Collaboratore"
+msgstr "Add Collaborator"
 
 #: myapp/templates/collaborator_form.html:7
 msgid "Aggiungi Nuovo Collaboratore"
-msgstr "Aggiungi Nuovo Collaboratore"
+msgstr "Add New Collaborator"
 
 #: myapp/templates/collaborator_form.html:41
 msgid "Immagine attuale:"
-msgstr "Immagine attuale:"
+msgstr "Current Image:"
 
 #: myapp/templates/admin/users/user_form.html:40
 #: myapp/templates/collaborator_form.html:50
 #: myapp/templates/edit_gallery.html:30 myapp/templates/gallery_upload.html:20
 msgid "Annulla"
-msgstr "Annulla"
+msgstr "Cancel"
 
 #: myapp/templates/contact.html:4
 msgid "Contatta i nostri wedding planner in Italia. Risposte rapide, servizi su misura."
-msgstr "Contatta i nostri wedding planner in Italia. Risposte rapide, servizi su misura."
+msgstr "Contact our wedding planners in Italy. Fast responses, tailored services."
 
 #: myapp/templates/contact.html:8
 msgid "Contattaci"
-msgstr "Contattaci"
+msgstr "Contact Us"
 
 #: myapp/templates/contact.html:16
 msgid "Inserisci il tuo nome"
-msgstr "Inserisci il tuo nome"
+msgstr "Enter your name"
 
 #: myapp/templates/contact.html:21
 msgid "Inserisci la tua email"
-msgstr "Inserisci la tua email"
+msgstr "Enter your email"
 
 #: myapp/templates/contact.html:26
 msgid "Inserisci il tuo numero di telefono"
-msgstr "Inserisci il tuo numero di telefono"
+msgstr "Enter your phone number"
 
 #: myapp/templates/contact.html:31
 msgid "Oggetto del messaggio"
-msgstr "Oggetto del messaggio"
+msgstr "Subject of the message"
 
 #: myapp/templates/contact.html:41
 msgid "Scrivi il tuo messaggio"
-msgstr "Scrivi il tuo messaggio"
+msgstr "Write your message"
 
 #: myapp/templates/contact.html:55
 msgid "Dove siamo"
-msgstr "Dove siamo"
+msgstr "Where we are"
 
 #: myapp/templates/cookie.html:2 myapp/templates/cookie.html:6
 msgid "Cookie Policy"
@@ -256,61 +256,61 @@ msgstr "Cookie Policy"
 
 #: myapp/templates/cookie.html:7
 msgid "Questo sito usa cookie tecnici e di terze parti."
-msgstr "Questo sito usa cookie tecnici e di terze parti."
+msgstr "This site uses technical and third-party cookies."
 
 #: myapp/templates/edit_gallery.html:3
 msgid "Modifica Immagine Galleria"
-msgstr "Modifica Immagine Galleria"
+msgstr "Edit Gallery Image"
 
 #: myapp/templates/edit_gallery.html:6
 msgid "Modifica Immagine"
-msgstr "Modifica Immagine"
+msgstr "Edit Image"
 
 #: myapp/templates/gallery.html:3 myapp/templates/gallery_upload.html:3
 msgid "Carica Immagine Galleria"
-msgstr "Carica Immagine Galleria"
+msgstr "Upload Gallery Image"
 
 #: myapp/templates/gallery.html:6
 msgid "Carica Nuova Immagine"
-msgstr "Carica Nuova Immagine"
+msgstr "Upload New Image"
 
 #: myapp/templates/gallery_upload.html:7
 msgid "Carica nuova immagine"
-msgstr "Carica nuova immagine"
+msgstr "Upload new image"
 
 #: myapp/templates/gallery_upload.html:19 myapp/templates/upload.html:14
 #: myapp/templates/upload_image.html:16
 msgid "Carica"
-msgstr "Carica"
+msgstr "Upload"
 
 #: myapp/templates/home.html:3
 msgid "Benvenuti nel nostro mondo di matrimoni su misura in Italia"
-msgstr "Benvenuti nel nostro mondo di matrimoni su misura in Italia"
+msgstr "Welcome to our world of tailor-made weddings in Italy"
 
 #: myapp/templates/home.html:7
 msgid "Benvenuti nel nostro mondo di matrimoni da sogno"
-msgstr "Benvenuti nel nostro mondo di matrimoni da sogno"
+msgstr "Welcome to our world of dream weddings"
 
 #: myapp/templates/home.html:8
 msgid "Organizziamo ogni dettaglio con amore e passione"
-msgstr "Organizziamo ogni dettaglio con amore e passione"
+msgstr "We organize every detail with love and passion"
 
 #: myapp/templates/home.html:13 myapp/templates/services.html:12
 msgid "I nostri Servizi"
-msgstr "I nostri Servizi"
+msgstr "Our Services"
 
 #: myapp/templates/admin/partials/admin_cards.html:15
 #: myapp/templates/home.html:27
 msgid "Galleria"
-msgstr "Galleria"
+msgstr "Gallery"
 
 #: myapp/templates/home.html:31
 msgid "Immagine Galleria"
-msgstr "Immagine Galleria"
+msgstr "Gallery Image"
 
 #: myapp/templates/home.html:40
 msgid "I nostri Collaboratori"
-msgstr "I nostri Collaboratori"
+msgstr "Our Collaborators"
 
 #: myapp/templates/privacy.html:2 myapp/templates/privacy.html:6
 msgid "Privacy Policy"
@@ -318,137 +318,137 @@ msgstr "Privacy Policy"
 
 #: myapp/templates/privacy.html:7
 msgid "Questa è la nostra informativa sulla privacy secondo il GDPR."
-msgstr "Questa è la nostra informativa sulla privacy secondo il GDPR."
+msgstr "This is our privacy policy according to GDPR."
 
 #: myapp/templates/service_form.html:3 myapp/templates/service_form.html:7
 msgid "Modifica Servizio"
-msgstr "Modifica Servizio"
+msgstr "Edit Service"
 
 #: myapp/templates/service_form.html:3
 msgid "Crea Servizio"
-msgstr "Crea Servizio"
+msgstr "Create Service"
 
 #: myapp/templates/service_form.html:7
 msgid "Crea Nuovo Servizio"
-msgstr "Crea Nuovo Servizio"
+msgstr "Create New Service"
 
 #: myapp/templates/services.html:3
 msgid "Scopri tutti i servizi per il tuo matrimonio da sogno: location, catering, allestimenti e molto altro."
-msgstr "Scopri tutti i servizi per il tuo matrimonio da sogno: location, catering, allestimenti e molto altro."
+msgstr "Discover all the services for your dream wedding: locations, catering, decorations, and more."
 
 #: myapp/templates/services.html:7
 msgid "Scopri i nostri servizi esclusivi"
-msgstr "Scopri i nostri servizi esclusivi"
+msgstr "Discover our exclusive services"
 
 #: myapp/templates/services.html:8
 msgid "Dalla pianificazione all’allestimento, ogni dettaglio è curato con stile."
-msgstr "Dalla pianificazione all’allestimento, ogni dettaglio è curato con stile."
+msgstr "From planning to setup, every detail is styled with care."
 
 #: myapp/templates/services.html:20
 msgid "Nessun servizio disponibile al momento."
-msgstr "Nessun servizio disponibile al momento."
+msgstr "No services available at the moment."
 
 #: myapp/templates/thankyou.html:2
 msgid "Grazie"
-msgstr "Grazie"
+msgstr "Thank you"
 
 #: myapp/templates/thankyou.html:3
 msgid "Grazie per averci contattato. Ti risponderemo al più presto con una proposta personalizzata."
-msgstr "Grazie per averci contattato. Ti risponderemo al più presto con una proposta personalizzata."
+msgstr "Thank you for contacting us. We will respond as soon as possible with a personalized proposal."
 
 #: myapp/templates/thankyou.html:9
 msgid "Ti risponderemo il prima possibile."
-msgstr "Ti risponderemo il prima possibile."
+msgstr "We will respond as soon as possible."
 
 #: myapp/templates/upload.html:2
 msgid "Carica immagine"
-msgstr "Carica immagine"
+msgstr "Upload Image"
 
 #: myapp/templates/upload.html:5 myapp/templates/upload_image.html:6
 msgid "Carica una nuova immagine"
-msgstr "Carica una nuova immagine"
+msgstr "Upload a new image"
 
 #: myapp/templates/upload.html:8
 msgid "Seleziona immagine"
-msgstr "Seleziona immagine"
+msgstr "Select Image"
 
 #: myapp/templates/upload.html:11
 msgid "Descrizione (opzionale)"
-msgstr "Descrizione (opzionale)"
+msgstr "Description (optional)"
 
 #: myapp/templates/admin/partials/admin_cards.html:21
 #: myapp/templates/upload_image.html:2
 msgid "Carica Immagine"
-msgstr "Carica Immagine"
+msgstr "Upload Image"
 
 #: myapp/templates/upload_image.html:9
 msgid "Scegli file immagine"
-msgstr "Scegli file immagine"
+msgstr "Choose image file"
 
 #: myapp/templates/upload_image.html:13
 msgid "Didascalia (facoltativa)"
-msgstr "Didascalia (facoltativa)"
+msgstr "Caption (optional)"
 
 #: myapp/templates/upload_image.html:17
 msgid "Torna alla Dashboard"
-msgstr "Torna alla Dashboard"
+msgstr "Back to Dashboard"
 
 #: myapp/templates/admin/contacts.html:2
 msgid "Messaggi di Contatto"
-msgstr "Messaggi di Contatto"
+msgstr "Contact Messages"
 
 #: myapp/templates/admin/contacts.html:6
 msgid "Messaggi di contatto"
-msgstr "Messaggi di contatto"
+msgstr "Contact Messages"
 
 #: myapp/templates/admin/contacts.html:7
 msgid "Messaggi non letti"
-msgstr "Messaggi non letti"
+msgstr "Unread Messages"
 
 #: myapp/templates/admin/contacts.html:9
 #: myapp/templates/admin/messages/messages_list.html:7
 msgid "Cerca..."
-msgstr "Cerca..."
+msgstr "Search..."
 
 #: myapp/templates/admin/contacts.html:18
 msgid "Motivo"
-msgstr "Motivo"
+msgstr "Reason"
 
 #: myapp/templates/admin/contacts.html:20
 #: myapp/templates/admin/messages/messages_list.html:15
 msgid "Data"
-msgstr "Data"
+msgstr "Date"
 
 #: myapp/templates/admin/contacts.html:21
 msgid "Stato"
-msgstr "Stato"
+msgstr "Status"
 
 #: myapp/templates/admin/contacts.html:39
 msgid "Letto"
-msgstr "Letto"
+msgstr "Read"
 
 #: myapp/templates/admin/contacts.html:39
 msgid "Non letto"
-msgstr "Non letto"
+msgstr "Unread"
 
 #: myapp/templates/admin/contacts.html:48
 #: myapp/templates/admin/messages/messages_list.html:30
 msgid "Esporta in Excel"
-msgstr "Esporta in Excel"
+msgstr "Export to Excel"
 
 #: myapp/templates/admin/contacts.html:50
 #: myapp/templates/admin/messages/messages_list.html:32
 msgid "Rispondi al messaggio"
-msgstr "Rispondi al messaggio"
+msgstr "Reply to message"
 
 #: myapp/templates/admin/contacts.html:61
 #: myapp/templates/admin/messages/messages_list.html:43
 msgid "Invia Email"
-msgstr "Invia Email"
+msgstr "Send Email"
 
 #: myapp/templates/admin/login.html:4
 msgid "Accedi alla dashboard per gestire i servizi matrimoniali e le prenotazioni."
-msgstr "Accedi alla dashboard per gestire i servizi matrimoniali e le prenotazioni."
+msgstr "Log in to the dashboard to manage wedding services and bookings."
 
 #: myapp/templates/admin/login.html:8
 msgid "Dashboard"
@@ -456,13 +456,13 @@ msgstr "Dashboard"
 
 #: myapp/templates/admin/login.html:9
 msgid "Benvenuto,"
-msgstr "Benvenuto,"
+msgstr "Welcome,"
 
 #: myapp/templates/admin/login.html:14
 #: myapp/templates/admin/partials/admin_cards.html:11
 #: myapp/templates/admin/partials/tab_services.html:4
 msgid "Aggiungi Servizio"
-msgstr "Aggiungi Servizio"
+msgstr "Add Service"
 
 #: myapp/templates/admin/login.html:19
 msgid "ID"
@@ -470,253 +470,251 @@ msgstr "ID"
 
 #: myapp/templates/admin/login.html:21
 msgid "Descrizione"
-msgstr "Descrizione"
+msgstr "Description"
 
 #: myapp/templates/admin/login.html:22
 msgid "Azioni"
-msgstr "Azioni"
+msgstr "Actions"
 
 #: myapp/templates/admin/login.html:32
 #: myapp/templates/admin/partials/admin_cards.html:6
 msgid "Modifica"
-msgstr "Modifica"
+msgstr "Edit"
 
 #: myapp/templates/admin/login.html:34
 msgid "Elimina"
-msgstr "Elimina"
+msgstr "Delete"
 
 #: myapp/templates/admin/login.html:40
 #: myapp/templates/admin/partials/tab_services.html:9
 msgid "Nessun servizio presente."
-msgstr "Nessun servizio presente."
+msgstr "No services available."
 
 #: myapp/templates/admin/login.html:49
 msgid "Sei sicuro di voler eliminare questo servizio?"
-msgstr "Sei sicuro di voler eliminare questo servizio?"
+msgstr "Are you sure you want to delete this service?"
 
 #: myapp/templates/admin/messages/messages_list.html:5
 msgid "Messaggi ricevuti"
-msgstr "Messaggi ricevuti"
+msgstr "Received Messages"
 
 #: myapp/templates/admin/partials/admin_cards.html:8
 msgid "Nessun servizio"
-msgstr "Nessun servizio"
+msgstr "No services"
 
 #: myapp/templates/admin/partials/admin_cards.html:19
 msgid "Nessuna immagine"
-msgstr "Nessuna immagine"
+msgstr "No images"
 
 #: myapp/templates/admin/partials/admin_cards.html:25
 msgid "Prenotazioni"
-msgstr "Prenotazioni"
+msgstr "Bookings"
 
 #: myapp/templates/admin/partials/admin_cards.html:30
 msgid "Nessuna prenotazione"
-msgstr "Nessuna prenotazione"
+msgstr "No bookings"
 
 #: myapp/templates/admin/partials/tab_services.html:3
 msgid "Esporta Servizi (CSV)"
-msgstr "Esporta Servizi (CSV)"
+msgstr "Export Services (CSV)"
 
 #: myapp/templates/admin/users/user_form.html:3
 #: myapp/templates/admin/users/user_form.html:7
 msgid "Modifica Utente"
-msgstr "Modifica Utente"
+msgstr "Edit User"
 
 #: myapp/templates/admin/users/user_form.html:3
 msgid "Aggiungi Utente"
-msgstr "Aggiungi Utente"
+msgstr "Add User"
 
 #: myapp/templates/admin/users/user_form.html:7
 msgid "Crea Nuovo Utente"
-msgstr "Crea Nuovo Utente"
+msgstr "Create New User"
 
 #: myapp/templates/admin/users/user_form.html:24
 msgid "Lascia vuoto per mantenere la password corrente"
-msgstr "Lascia vuoto per mantenere la password corrente"
+msgstr "Leave blank to keep current password"
 
 #: myapp/utils/admin_utils.py:12
 msgid "Accesso non autorizzato"
-msgstr "Accesso non autorizzato"
+msgstr "Unauthorized access"
 
 #: myapp/utils/forms_utils.py:5
 msgid "Campo obbligatorio"
-msgstr "Campo obbligatorio"
+msgstr "Required field"
 
 #: myapp/utils/forms_utils.py:12
 msgid "Inserisci un indirizzo email valido."
-msgstr "Inserisci un indirizzo email valido."
+msgstr "Enter a valid email address."
 
 #: myapp/utils/forms_utils.py:19
 msgid "La password deve contenere almeno 8 caratteri."
-msgstr "La password deve contenere almeno 8 caratteri."
+msgstr "Password must be at least 8 characters long."
 
 #: myapp/utils/forms_utils.py:26
 msgid "Le password non coincidono."
-msgstr "Le password non coincidono."
+msgstr "Passwords do not match."
 
 #: myapp/utils/forms_utils.py:33
 msgid "Numero di telefono non valido."
-msgstr "Numero di telefono non valido."
+msgstr "Invalid phone number."
 
 #: myapp/utils/forms_utils.py:40
 msgid "Formato non valido."
-msgstr "Formato non valido."
+msgstr "Invalid format."
 
 #: myapp/utils/forms_utils.py:47
 msgid "Seleziona un'opzione valida."
-msgstr "Seleziona un'opzione valida."
+msgstr "Please select a valid option."
 
 #: myapp/utils/forms_utils.py:54
 msgid "Deve essere un numero positivo."
-msgstr "Deve essere un numero positivo."
+msgstr "Must be a positive number."
 
 #: myapp/utils/forms_utils.py:61
 msgid "La data non può essere nel passato."
-msgstr "La data non può essere nel passato."
+msgstr "Date cannot be in the past."
 
 #: myapp/utils/forms_utils.py:68
 msgid "Errore di validazione sconosciuto."
-msgstr "Errore di validazione sconosciuto."
+msgstr "Unknown validation error."
 
 #: myapp/utils/mailer.py:10
 msgid "Errore nell'invio dell'email."
-msgstr "Errore nell'invio dell'email."
+msgstr "Error sending email."
 
 #: myapp/utils/mailer.py:20
 msgid "Email inviata con successo."
-msgstr "Email inviata con successo."
+msgstr "Email sent successfully."
 
 #: myapp/utils/mailer.py:30
 msgid "Indirizzo email del destinatario non valido."
-msgstr "Indirizzo email del destinatario non valido."
+msgstr "Invalid recipient email address."
 
 #: myapp/utils/mailer.py:40
 msgid "Oggetto email mancante."
-msgstr "Oggetto email mancante."
+msgstr "Missing email subject."
 
 #: myapp/utils/mailer.py:50
 msgid "Contenuto email mancante."
-msgstr "Contenuto email mancante."
+msgstr "Missing email content."
 
 #: myapp/models/user.py:15
 msgid "Utente non trovato."
-msgstr "Utente non trovato."
+msgstr "User not found."
 
 #: myapp/models/user.py:25
 msgid "Password errata."
-msgstr "Password errata."
+msgstr "Incorrect password."
 
 #: myapp/models/user.py:35
 msgid "Utente creato con successo."
-msgstr "Utente creato con successo."
+msgstr "User created successfully."
 
 #: myapp/models/user.py:45
 msgid "Utente aggiornato con successo."
-msgstr "Utente aggiornato con successo."
+msgstr "User updated successfully."
 
 #: myapp/models/user.py:55
 msgid "Utente eliminato con successo."
-msgstr "Utente eliminato con successo."
+msgstr "User deleted successfully."
 
 #: myapp/models/booking.py:20
 msgid "Prenotazione creata con successo."
-msgstr "Prenotazione creata con successo."
+msgstr "Booking created successfully."
 
 #: myapp/models/booking.py:30
 msgid "Prenotazione aggiornata con successo."
-msgstr "Prenotazione aggiornata con successo."
+msgstr "Booking updated successfully."
 
 #: myapp/models/booking.py:40
 msgid "Prenotazione eliminata con successo."
-msgstr "Prenotazione eliminata con successo."
+msgstr "Booking deleted successfully."
 
 #: myapp/models/service.py:10
 msgid "Servizio creato con successo."
-msgstr "Servizio creato con successo."
+msgstr "Service created successfully."
 
 #: myapp/models/service.py:20
 msgid "Servizio aggiornato con successo."
-msgstr "Servizio aggiornato con successo."
+msgstr "Service updated successfully."
 
 #: myapp/models/service.py:30
 msgid "Servizio eliminato con successo."
-msgstr "Servizio eliminato con successo."
+msgstr "Service deleted successfully."
 
 #: myapp/models/gallery.py:10
 msgid "Immagine caricata con successo."
-msgstr "Immagine caricata con successo."
+msgstr "Image uploaded successfully."
 
 #: myapp/models/gallery.py:20
 msgid "Immagine aggiornata con successo."
-msgstr "Immagine aggiornata con successo."
+msgstr "Image updated successfully."
 
 #: myapp/models/gallery.py:30
 msgid "Immagine eliminata con successo."
-msgstr "Immagine eliminata con successo."
+msgstr "Image deleted successfully."
 
 #: myapp/routes/admin.py:100
 msgid "Accesso negato."
-msgstr "Accesso negato."
+msgstr "Access denied."
 
 #: myapp/routes/admin.py:110
 msgid "Devi essere autenticato per accedere a questa pagina."
-msgstr "Devi essere autenticato per accedere a questa pagina."
+msgstr "You must be logged in to access this page."
 
 #: myapp/routes/admin.py:120
 msgid "Sessione scaduta. Effettua nuovamente il login."
-msgstr "Sessione scaduta. Effettua nuovamente il login."
+msgstr "Session expired. Please log in again."
 
 #: myapp/routes/public.py:50
 msgid "Pagina non trovata."
-msgstr "Pagina non trovata."
+msgstr "Page not found."
 
 #: myapp/routes/public.py:60
 msgid "Errore interno del server."
-msgstr "Errore interno del server."
+msgstr "Internal server error."
 
 #: myapp/routes/public.py:70
 msgid "Richiesta non valida."
-msgstr "Richiesta non valida."
+msgstr "Invalid request."
 
 #: myapp/templates/errors/404.html:3
 msgid "Errore 404 - Pagina non trovata"
-msgstr "Errore 404 - Pagina non trovata"
+msgstr "Error 404 - Page Not Found"
 
 #: myapp/templates/errors/500.html:3
 msgid "Errore 500 - Errore interno del server"
-msgstr "Errore 500 - Errore interno del server"
+msgstr "Error 500 - Internal Server Error"
 
 #: myapp/templates/errors/403.html:3
 msgid "Errore 403 - Accesso negato"
-msgstr "Errore 403 - Accesso negato"
+msgstr "Error 403 - Access Denied"
 
 #: myapp/static/js/scripts.js:15
 msgid "Caricamento in corso..."
-msgstr "Caricamento in corso..."
+msgstr "Loading..."
 
 #: myapp/static/js/scripts.js:30
 msgid "Operazione completata con successo."
-msgstr "Operazione completata con successo."
+msgstr "Operation completed successfully."
 
 #: myapp/static/js/scripts.js:45
 msgid "Si è verificato un errore, riprova più tardi."
-msgstr "Si è verificato un errore, riprova più tardi."
+msgstr "An error occurred, please try again later."
 
 #: myapp/static/js/scripts.js:60
 msgid "Conferma cancellazione"
-msgstr "Conferma cancellazione"
+msgstr "Confirm deletion"
 
 #: myapp/static/js/scripts.js:75
 msgid "Sei sicuro di voler cancellare questo elemento?"
-msgstr "Sei sicuro di voler cancellare questo elemento?"
+msgstr "Are you sure you want to delete this item?"
 
 #: myapp/static/js/scripts.js:90
 msgid "Sì"
-msgstr "Sì"
+msgstr "Yes"
 
 #: myapp/static/js/scripts.js:105
 msgid "No"
 msgstr "No"
-
-
