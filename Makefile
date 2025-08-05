@@ -1,26 +1,49 @@
-.PHONY: activate migrate seed create_admins create_admin babel run all
+# ================================
+# Wedding Site - Gestione Traduzioni con Controllo Encoding
+# ================================
 
-activate:
-	. .venv/Scripts/activate
+# Percorsi
+VENV = .venv
+BABEL_CFG = babel.cfg
+POT_FILE = translations/messages.pot
+TRANS_DIR = translations
+PYBABEL = $(VENV)/Scripts/pybabel.exe
 
-migrate:
-	flask migrate-db
+# Rimuove BOM dai file PO se presenti
+.PHONY: fix_bom
+fix_bom:
+	@echo "🔍 Controllo BOM nei file .po..."
+	@find $(TRANS_DIR) -type f -name "*.po" | while read f; do \
+		if head -c 3 $$f | grep -q $'\xef\xbb\xbf'; then \
+			echo "⚠️  BOM trovato in $$f → rimosso."; \
+			tail -c +4 $$f > $$f.tmp && mv $$f.tmp $$f; \
+		else \
+			echo "✅ Nessun BOM in $$f"; \
+		fi \
+	done
 
-seed:
-	flask seed-demo
+# Aggiorna e compila le traduzioni
+.PHONY: translations
+translations: fix_bom
+	@echo "=== Attivo ambiente virtuale ==="
+	@if [ -f "$(VENV)/Scripts/activate" ]; then \
+		. "$(VENV)/Scripts/activate"; \
+	else \
+		echo "❌ Ambiente virtuale non trovato."; \
+		exit 1; \
+	fi
+	@echo "=== Estrazione stringhe ==="
+	@$(PYBABEL) extract -F $(BABEL_CFG) -o $(POT_FILE) .
+	@echo "=== Aggiornamento file .po ==="
+	@$(PYBABEL) update -i $(POT_FILE) -d $(TRANS_DIR)
+	@echo "=== Compilazione file .mo ==="
+	@$(PYBABEL) compile -d $(TRANS_DIR)
+	@echo "🎉 Traduzioni aggiornate e compilate."
 
-create_admins:
-	flask create-admins admins.json
-
-create_admin:
-	flask create-admin --username=admin --email=admin@example.com --password=admin123
-
-babel:
-	pybabel extract -F babel.cfg -o translations/messages.pot .
-	pybabel update -i translations/messages.pot -d translations
-	pybabel compile -d translations
-
-run:
-	flask run
-
-all: migrate seed create_admins create_admin babel run
+# Pulizia file temporanei
+.PHONY: clean_translations
+clean_translations:
+	@echo "🧹 Pulizia file temporanei..."
+	@find $(TRANS_DIR) -type f -name '*.mo' -delete
+	@find $(TRANS_DIR) -type f -name '*.pot' -delete
+	@echo "✅ Pulizia completata."
